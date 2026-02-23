@@ -9,6 +9,7 @@
 				default = pkgs.fish;
 			};
 			groups = lib.mkOption {
+				type = lib.types.listOf lib.types.str;
 				default = [ "wheel" "input" "uinput" ];
 			};
 			home = "/home/${config.cfg.users.main.username}";
@@ -16,9 +17,10 @@
 	};
 
 	config = lib.mkIf config.cfg.users.main.enable {
+		cfg.users.main.groups = lib.mkBefore [ "wheel" "input" "uinput" ];
 		users.users.${config.cfg.users.main.username} = {
 			isNormalUser = true;
-			extraGroups = config.cfg.users.main.groups;
+			extraGroups = config.cfg.users.main.groups ++ [ "wheel" ];
 			home = "/home/${config.cfg.users.main.username}";
 			shell = config.cfg.users.main.shell;
 		};
