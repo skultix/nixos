@@ -9,6 +9,11 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		agenix = {
+			url = "github:ryantm/agenix";
+			inputs.darwin.follows = ""; # no need for apple stuff on nixos
+		};
+
 		hyprland.url = "github:hyprwm/Hyprland";
 		hyprland-plugins = {
 			url = "github:hyprwm/hyprland-plugins";
@@ -43,6 +48,8 @@
 			modules = [
 				./hosts/${name}/configuration.nix
 				(inputs.import-tree ./modules/nixos)
+				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)
+				inputs.agenix.nixosModules.default
 				./modules/unfree.nix
 				{ networking.hostName = name; }
 				inputs.home-manager.nixosModules.default
