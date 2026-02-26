@@ -13,10 +13,6 @@
 
 		bluetooth.enable = true;
 
-		desktop = {
-			statusbar.enable = true;
-		};
-
 		games = {
 			enable = true;
 			steam.enable = true;
