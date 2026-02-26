@@ -10,19 +10,23 @@
 			};
 			groups = lib.mkOption {
 				type = lib.types.listOf lib.types.str;
+				default = [];
+			};
+			core-groups = lib.mkOption {
 				default = [ "wheel" "input" "uinput" ];
 			};
 			home = "/home/${config.cfg.users.main.username}";
 		};
 	};
 
-	config = lib.mkIf config.cfg.users.main.enable {
-		cfg.users.main.groups = lib.mkBefore [ "wheel" "input" "uinput" ];
-		users.users.${config.cfg.users.main.username} = {
+	config = let
+	usercfg = config.cfg.users.main;
+	in lib.mkIf usercfg.enable {
+		users.users.${usercfg.username} = {
 			isNormalUser = true;
-			extraGroups = config.cfg.users.main.groups ++ [ "wheel" ];
-			home = "/home/${config.cfg.users.main.username}";
-			shell = config.cfg.users.main.shell;
+			extraGroups = usercfg.core-groups ++ usercfg.groups;
+			home = "/home/${usercfg.username}";
+			shell = usercfg.shell;
 		};
 
 		home-manager = {
