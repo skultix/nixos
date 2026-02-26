@@ -26,4 +26,8 @@ in {
 	home.packages = [
 		equicord-upd
 	];
+
+	xdg.autostart.entries = [
+		"${pkgs.discord}/share/applications/discord.desktop"
+	];
 }
