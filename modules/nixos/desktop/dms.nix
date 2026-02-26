@@ -1,6 +1,6 @@
 { ... }: {
 	programs.dms-shell = {
-		enable = true;
+		enable = false;
 		enableSystemMonitoring = true;
 		enableAudioWavelength = true;
 		enableVPN = true;
