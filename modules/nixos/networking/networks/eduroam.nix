@@ -10,6 +10,8 @@
 					id = "eduroam";
 					type = "wifi";
 					interface-name = "wlp0s20f3";
+					autoconnect = "true";
+					autoconnect-priority = "10";
 				};
 
 				wifi = {
