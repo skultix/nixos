@@ -14,16 +14,6 @@
 			inputs.darwin.follows = ""; # no need for apple stuff on nixos
 		};
 
-		hyprland.url = "github:hyprwm/Hyprland";
-		hyprland-plugins = {
-			url = "github:hyprwm/hyprland-plugins";
-			inputs.hyprland.follows = "hyprland";
-		};
-		hypr-dynamic-cursors = {
-			url = "github:VirtCode/hypr-dynamic-cursors";
-			inputs.hyprland.follows = "hyprland";
-		};
-
 		noctalia = {
 			url = "github:noctalia-dev/noctalia-shell";
 			inputs.nixpkgs.follows = "nixpkgs";
