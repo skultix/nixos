@@ -1,3 +1,3 @@
 { pkgs, ... }: {
-	environment.systemPackages = with pkgs; [ swaynotificationcenter ];
+	# environment.systemPackages = with pkgs; [ swaynotificationcenter ];
 }
