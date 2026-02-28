@@ -1,13 +1,8 @@
-{ inputs, pkgs, ... }: {
-	imports = [
-		inputs.niri.homeModules.niri
-	];
-
-	programs.niri = {
-		enable = true;
-		package = pkgs.niri;
-		config = null; # don't generate for now
-	};
+{ pkgs, ... }: {
+	# programs.niri.settings = {
+	#
+	# };
+	programs.niri.config = null; # don't generate for the minute
 
 	home.packages = with pkgs; [
 		xwayland-satellite
