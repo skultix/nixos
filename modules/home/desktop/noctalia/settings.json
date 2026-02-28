@@ -58,6 +58,25 @@
 				},
 				{
 					"id": "plugin:network-indicator"
+				},
+				{
+					"characterCount": 2,
+					"colorizeIcons": false,
+					"emptyColor": "none",
+					"enableScrollWheel": true,
+					"focusedColor": "primary",
+					"followFocusedScreen": false,
+					"groupedBorderOpacity": 1,
+					"hideUnoccupied": false,
+					"iconScale": 0.8,
+					"id": "Workspace",
+					"labelMode": "none",
+					"occupiedColor": "secondary",
+					"pillSize": 0.6,
+					"showApplications": false,
+					"showBadge": true,
+					"showLabelsOnlyWhenOccupied": true,
+					"unfocusedIconsOpacity": 1
 				}
 			],
 			"center": [
