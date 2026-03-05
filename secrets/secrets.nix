@@ -10,6 +10,12 @@ machines = [ skultik ];
 defaults = [ general ] ++ machines;
 in
 {
-	# WiFi
+	# <== WiFi ==>
 	"wifi/eduroam.age".publicKeys = defaults;
+
+	# <== Cloud storage ==>
+	# Google Drive
+	"cloud/google-drive/client_id.age".publicKeys = defaults;
+	"cloud/google-drive/client_secret.age".publicKeys = defaults;
+	"cloud/google-drive/token.age".publicKeys = defaults;
 }

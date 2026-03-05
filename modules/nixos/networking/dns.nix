@@ -6,7 +6,15 @@
 			];
 		};
 	};
-	config = {
-		networking.networkmanager.insertNameservers = config.cfg.networking.dns.nameservers;
+	config = let
+	nameservers = config.cfg.networking.dns.nameservers;
+	in {
+		networking = {
+			nameservers = nameservers;
+			dhcpcd.extraConfig = "nohook resolv.conf";
+			networkmanager.dns = "systemd-resolved";
+		};
+
+		services.resolved.enable = true;
 	};
 }
