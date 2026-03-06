@@ -18,4 +18,7 @@ in
 	"cloud/google-drive/client_id.age".publicKeys = defaults;
 	"cloud/google-drive/client_secret.age".publicKeys = defaults;
 	"cloud/google-drive/token.age".publicKeys = defaults;
+	# Proton Drive
+	"cloud/proton-drive/username.age".publicKeys = defaults;
+	"cloud/proton-drive/password.age".publicKeys = defaults;
 }
