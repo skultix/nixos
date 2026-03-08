@@ -21,6 +21,7 @@
 				enable = true;
 				clients.lunar = true;
 			};
+			vr.enable = true;
 		};
 	};
 	
