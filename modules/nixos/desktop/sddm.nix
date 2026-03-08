@@ -16,6 +16,7 @@ in {
 	services.displayManager.sddm = {
 		enable = true;
 		wayland.enable = true;
+		wayland.compositor = "kwin";
 		autoNumlock = true;
 		theme = "sddm-astronaut-theme";
 		extraPackages = with pkgs; [
