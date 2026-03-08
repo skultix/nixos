@@ -21,4 +21,8 @@ in
 	# Proton Drive
 	"cloud/proton-drive/username.age".publicKeys = defaults;
 	"cloud/proton-drive/password.age".publicKeys = defaults;
+	"cloud/proton-drive/client_uid.age".publicKeys = defaults;
+	"cloud/proton-drive/client_access_token.age".publicKeys = defaults;
+	"cloud/proton-drive/client_refresh_token.age".publicKeys = defaults;
+	"cloud/proton-drive/client_salted_key_pass.age".publicKeys = defaults;
 }
