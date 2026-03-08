@@ -29,7 +29,6 @@ in {
 		services.wivrn = lib.mkIf vrcfg.wivrn.enable {
 			enable = true;
 			openFirewall = true;
-			autoStart = true;
 			steam = lib.mkIf gamecfg.steam.enable {
 				package = config.programs.steam.package;
 				importOXRRuntimes = true;
