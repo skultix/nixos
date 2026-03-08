@@ -11,14 +11,27 @@
 		in {
 			username = secret "username";
 			password = secret "password";
+			client_uid = secret "client_uid";
+			client_access_token = secret "client_access_token";
+			client_refresh_token = secret "client_refresh_token";
+			client_salted_key_pass = secret "client_salted_key_pass";
 		};
 		config = {
 			type = "protondrive";
 		};
 	};
 
-	age.secrets = {
-		"cloud/proton-drive/username".file = ../../../../secrets/cloud/proton-drive/username.age;
-		"cloud/proton-drive/password".file = ../../../../secrets/cloud/proton-drive/password.age;
-	};
+	age.secrets = let
+	mkSecrets = secrets: builtins.listToAttrs (map (secret: {
+		name = "cloud/proton-drive/${secret}";
+		value = { file = ../../../../secrets/cloud/proton-drive/${secret}.age; };
+	}) secrets);
+	in mkSecrets [
+		"username"
+		"password"
+		"client_uid"
+		"client_access_token"
+		"client_refresh_token"
+		"client_salted_key_pass"
+	];
 }
