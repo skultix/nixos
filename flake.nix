@@ -14,6 +14,10 @@
 			inputs.darwin.follows = ""; # no need for apple stuff on nixos
 		};
 
+		lunar-client ={
+			url = "github:clonidine/lunar-client-flake";
+		};
+
 		niri = {
 			url = "github:sodiboo/niri-flake";
 			inputs.nixpkgs.follows = "nixpkgs";

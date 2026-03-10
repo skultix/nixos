@@ -1,4 +1,4 @@
-{ pkgs, lib, config, ... }: let
+{ pkgs, lib, config, inputs, ... }: let
 minecraft = config.cfg.games.minecraft;
 in {
 	options = {
@@ -27,7 +27,8 @@ in {
 			})
 		]
 		++ lib.optional minecraft.clients.badlion badlion-client
-		++ lib.optional minecraft.clients.lunar lunar-client
+		# ++ lib.optional minecraft.clients.lunar lunar-client
+		++ lib.optional minecraft.clients.lunar inputs.lunar-client.packages.${pkgs.stdenv.hostPlatform.system}.default
 		;
 	};
 }

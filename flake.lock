@@ -370,6 +370,24 @@
         "type": "github"
       }
     },
+    "lunar-client": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "lastModified": 1773023517,
+        "narHash": "sha256-j2gL9EBjcOX45xaxR54OW57wLFjed547tkDQfP8V+6E=",
+        "owner": "clonidine",
+        "repo": "lunar-client-flake",
+        "rev": "33c4f5e823f114c97642875a6e69150eaeb22dcd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "clonidine",
+        "repo": "lunar-client-flake",
+        "type": "github"
+      }
+    },
     "millennium": {
       "inputs": {
         "abseil-src": "abseil-src",
@@ -568,6 +586,22 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1770841267,
+        "narHash": "sha256-9xejG0KoqsoKEGp2kVbXRlEYtFFcDTHjidiuX8hGO44=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ec7c70d12ce2fc37cb92aff673dcdca89d187bae",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1772624091,
         "narHash": "sha256-QKyJ0QGWBn6r0invrMAK8dmJoBYWoOWy7lN+UHzW1jc=",
         "owner": "nixos",
@@ -671,9 +705,10 @@
         "agenix": "agenix",
         "home-manager": "home-manager_2",
         "import-tree": "import-tree",
+        "lunar-client": "lunar-client",
         "millennium": "millennium",
         "niri": "niri",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "noctalia": "noctalia",
         "stylix": "stylix",
         "tinted-schemes": "tinted-schemes_2"
