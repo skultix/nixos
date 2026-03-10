@@ -17,6 +17,8 @@ in {
 		};
 
 		xrizer.enable = mkDefaultOption true;
+
+		sidequest.enable = mkDefaultOption false;
 	};
 
 	config = lib.mkIf vrcfg.enable {
@@ -25,7 +27,10 @@ in {
 			message = "you cannot set multiple default OpenXR runtimes!";
 		}];
 
-		environment.systemPackages = lib.mkIf vrcfg.xrizer.enable [ pkgs.xrizer ];
+		environment.systemPackages = []
+		++ lib.optional vrcfg.xrizer.enable pkgs.xrizer
+		++ lib.optional vrcfg.sidequest.enable pkgs.sidequest
+		;
 
 		services.monado = lib.mkIf vrcfg.monado.enable {
 			enable = true;

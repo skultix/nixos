@@ -21,7 +21,10 @@
 				enable = true;
 				clients.lunar = true;
 			};
-			vr.enable = true;
+			vr = {
+				enable = true;
+				sidequest.enable = true;
+			};
 		};
 	};
 	
