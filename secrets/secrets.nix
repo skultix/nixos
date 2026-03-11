@@ -12,6 +12,7 @@ in
 {
 	# <== WiFi ==>
 	"wifi/eduroam.age".publicKeys = defaults;
+	"wifi/uq.age".publicKeys = defaults;
 
 	# <== Cloud storage ==>
 	# Google Drive
