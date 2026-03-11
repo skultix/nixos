@@ -26,6 +26,7 @@
 					identity = "s5026398@uq.edu.au";
 					anonymous-identity = "anonymous@uq.edu.au";
 					password = "$EDUROAM_PASSWORD";
+					proactive-key-caching = "1";
 				};
 
 				ipv4.method = "auto";
