@@ -13,7 +13,7 @@
 			};
 
 			mouse = {
-				natural-scroll = true;
+				natural-scroll = false; # for some reason false is normal scrolling on a mouse
 			};
 		};
 	};
