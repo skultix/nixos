@@ -16,6 +16,10 @@
 			extraPackages = with pkgs; [
 				jdk # java dep
 			];
+
+			extraCompatPackages = with pkgs; [
+				proton-ge-bin
+			];
 		};
 
 		# For appimage-formatted native linux builds of games

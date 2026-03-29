@@ -2,6 +2,7 @@
 {
 	imports = [
 		(inputs.import-tree ./modules/home)
+		inputs.steam-config.homeModules.default
 		./modules/unfree.nix
 	];
 

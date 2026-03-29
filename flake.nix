@@ -38,6 +38,11 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		steam-config = {
+			url = "github:different-name/steam-config-nix";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		tinted-schemes = {
 			flake = false;
 			url = "github:tinted-theming/schemes";
