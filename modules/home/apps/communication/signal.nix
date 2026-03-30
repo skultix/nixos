@@ -12,4 +12,8 @@ in {
 			'';
 		})
 	];
+
+	xdg.autostart.entries = [
+		"${pkgs.signal-desktop}/share/applications/${(builtins.elemAt pkgs.signal-desktop.desktopItems 0).name}"
+	];
 }
