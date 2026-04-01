@@ -3,4 +3,8 @@
 		vivaldi
 		vivaldi-ffmpeg-codecs
 	];
+
+	xdg.autostart.entries = [
+		"${pkgs.vivaldi}/share/applications/vivaldi-stable.desktop"
+	];
 }
