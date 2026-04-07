@@ -2,7 +2,9 @@
 	programs.starship = {
 		enable = true;
 		settings = {
+			format = "$all$nix_shell$character";
 			add_newline = true;
+
 			aws = {
 				format = "[$symbol($profile)(\\($region\\))([$duration])]($style) ";
 				symbol = "  ";
@@ -136,7 +138,8 @@
 				symbol = "󰆥 ";
 			};
 			nix_shell = {
-				format = "[$symbol$state( ($name))]($style) ";
+				# format = "[$symbol$state( ($name))]($style) ";
+				format = "[$symbol]($style)";
 				symbol = " ";
 			};
 			nodejs = {
@@ -204,7 +207,7 @@
 			shlvl = {
 				format = "[$symbol$shlvl]($style) ";
 				symbol = " ";
-				disabled = false;
+				disabled = true;
 			};
 			solidity = {
 				format = "[$symbol($version)]($style) ";
