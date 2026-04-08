@@ -15,6 +15,7 @@ in
 	"wifi/uq.age".publicKeys = defaults;
 
 	# <== Wireguard ==>
+	"wg/wg-home.age".publicKeys = defaults;
 	"wg/protonvpn-brisbane.age".publicKeys = defaults;
 
 	# <== Cloud storage ==>
