@@ -14,6 +14,9 @@ in
 	"wifi/eduroam.age".publicKeys = defaults;
 	"wifi/uq.age".publicKeys = defaults;
 
+	# <== Wireguard ==>
+	"wg/protonvpn-brisbane.age".publicKeys = defaults;
+
 	# <== Cloud storage ==>
 	# Google Drive
 	"cloud/google-drive/client_id.age".publicKeys = defaults;
