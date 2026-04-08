@@ -9,6 +9,7 @@
 				id = "ProtonVPN Brisbane";
 				type = "wireguard";
 				interface-name = "protonvpn-bne";
+				autoconnect = "false";
 			};
 			wireguard = {
 				private-key = "$PROTONVPN_BRISBANE_PRIVATE_KEY";
