@@ -13,8 +13,12 @@ in lib.mkIf vrcfg.enable {
 		config = onlyif gamecfg.steam.enable [ "${steam}/config" ];
 		log = onlyif gamecfg.steam.enable [ "${steam}/logs" ];
 
-		runtime = onlyif vrcfg.xrizer.enable [
-			"${pkgs.xrizer}/lib/xrizer"
-		];
+		# runtime = onlyif vrcfg.xrizer.enable [
+		# 	"${pkgs.xrizer}/lib/xrizer"
+		# ];
+		runtime = []
+		++ lib.optional vrcfg.xrizer.enable "${pkgs.xrizer}/lib/xrizer"
+		++ lib.optional gamecfg.steam.enable "${steam}/steamapps/common/SteamVR"
+		;
 	});
 }
