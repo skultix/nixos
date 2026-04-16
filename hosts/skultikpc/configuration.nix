@@ -28,6 +28,8 @@
 		};
 	};
 	
+	powerManagement.cpuFreqGovernor = "performance";
+
 	# <== To-be-modularised/organised ==>
 	environment.systemPackages = with pkgs; [
 		vim
