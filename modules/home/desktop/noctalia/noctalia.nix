@@ -6,6 +6,22 @@
 	programs.noctalia-shell = {
 		enable = true;
 		settings = builtins.fromJSON (builtins.readFile ./settings.json);
+		plugins = {
+			sources = [
+				{
+					name = "Official Noctalia Plugins";
+					url = "https://github.com/noctalia-dev/noctalia-plugins";
+					enabled = true;
+				}
+			];
+
+			states = {
+				network-manager-vpn = {
+					enabled = true;
+					sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
+				};
+			};
+		};
 	};
 
 	systemd.user.services.noctalia = {
