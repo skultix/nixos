@@ -14,6 +14,8 @@
 			inputs.darwin.follows = ""; # no need for apple stuff on nixos
 		};
 
+		flatpak.url = "github:gmodena/nix-flatpak";
+
 		lunar-client ={
 			url = "github:clonidine/lunar-client-flake";
 		};
@@ -62,6 +64,7 @@
 				./modules/unfree.nix
 				{ networking.hostName = name; }
 				inputs.home-manager.nixosModules.default
+				inputs.flatpak.nixosModules.nix-flatpak
 				inputs.stylix.nixosModules.stylix
 				inputs.niri.nixosModules.niri
 			];

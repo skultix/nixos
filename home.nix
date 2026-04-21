@@ -2,6 +2,7 @@
 {
 	imports = [
 		(inputs.import-tree ./modules/home)
+		inputs.flatpak.homeManagerModules.nix-flatpak
 		inputs.steam-config.homeModules.default
 		./modules/unfree.nix
 	];

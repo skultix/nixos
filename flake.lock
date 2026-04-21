@@ -198,6 +198,21 @@
         "type": "github"
       }
     },
+    "flatpak": {
+      "locked": {
+        "lastModified": 1776625032,
+        "narHash": "sha256-edvwHiFhgOiwywt6/Iwe+sSn6ybhU3WZGnIoiGcKjfQ=",
+        "owner": "gmodena",
+        "repo": "nix-flatpak",
+        "rev": "479e19f1decb390aa5b75cae13ddf87d763c74cc",
+        "type": "github"
+      },
+      "original": {
+        "owner": "gmodena",
+        "repo": "nix-flatpak",
+        "type": "github"
+      }
+    },
     "fmt-src": {
       "flake": false,
       "locked": {
@@ -724,6 +739,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
+        "flatpak": "flatpak",
         "home-manager": "home-manager_2",
         "import-tree": "import-tree",
         "lunar-client": "lunar-client",
