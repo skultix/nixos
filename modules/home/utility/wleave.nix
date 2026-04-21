@@ -28,14 +28,12 @@
 				}
 				{
 					label = "logout";
-					action = "hyprshutdown";
-					# TODO: use this format once nixpkgs updates wleave
-					# action = [
-					# 	{
-					# 		"$DESKTOP_SESSION" = "hyprland";
-					# 		shell = "hyprshutdown";
-					# 	}
-					# ];
+					action = [
+						{
+							"$DESKTOP_SESSION" = "hyprland";
+							shell = "hyprshutdown";
+						}
+					];
 					text = "Logout";
 					keybind = "e";
 					icon = "${pkgs.wleave}/share/wleave/icons/logout.svg";
