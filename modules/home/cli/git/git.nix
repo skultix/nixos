@@ -25,7 +25,7 @@
 			url = {
 				"git@github.com:".insteadOf = "gh:";
 				"git@gitlab.com:".insteadOf = "glab:";
-				"uni:".insteadOf = "git@github.com:Marleys-Uni-Work/";
+				"git@github.com:Marleys-Uni-Work/".insteadOf = "uni:";
 			};
 			alias = {
 				lg = "log --graph --pretty=format:'%Cred%h%d %Cgreen%ar %Cblue[%an]  %Creset%s'";
