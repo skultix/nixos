@@ -3,7 +3,7 @@
 		# backends
 		hyprpaper
 		mpvpaper
-		swww
+		awww
 
 		# frontend
 		waypaper
