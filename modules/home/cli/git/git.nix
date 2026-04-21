@@ -22,6 +22,11 @@
 			merge = {
 				conflictStyle = "zdiff3";
 			};
+			url = {
+				"git@github.com:".insteadOf = "gh:";
+				"git@gitlab.com:".insteadOf = "glab:";
+				"uni:".insteadOf = "git@github.com:Marleys-Uni-Work/";
+			};
 			alias = {
 				lg = "log --graph --pretty=format:'%Cred%h%d %Cgreen%ar %Cblue[%an]  %Creset%s'";
 			};
