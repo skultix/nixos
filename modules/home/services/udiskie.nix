@@ -4,7 +4,7 @@
 		settings = {
 			program_options = {
 				file_manager = "nautilus";
-				terminal = "kitty -d=";
+				terminal = "ghostty --working-directory=";
 			};
 			notifications = {
 				timeout = 1.5;
