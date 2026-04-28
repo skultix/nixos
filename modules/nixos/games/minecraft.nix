@@ -30,5 +30,7 @@ in {
 		# ++ lib.optional minecraft.clients.lunar lunar-client
 		++ lib.optional minecraft.clients.lunar inputs.lunar-client.packages.${pkgs.stdenv.hostPlatform.system}.default
 		;
+
+		networking.firewall.allowedTCPPorts = [ 25565 25575 ];
 	};
 }
