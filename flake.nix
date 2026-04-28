@@ -14,6 +14,11 @@
 			inputs.darwin.follows = ""; # no need for apple stuff on nixos
 		};
 
+		claude-desktop = {
+			url = "github:aaddrick/claude-desktop-debian";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		flatpak.url = "github:gmodena/nix-flatpak";
 
 		lunar-client ={
@@ -58,13 +63,14 @@
 			specialArgs = { inherit inputs; };
 			modules = [
 				./hosts/${name}/configuration.nix
+				./modules/unfree.nix
+				{ networking.hostName = name; }
+
 				(inputs.import-tree ./modules/nixos)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)
 				inputs.agenix.nixosModules.default
-				./modules/unfree.nix
-				{ networking.hostName = name; }
-				inputs.home-manager.nixosModules.default
 				inputs.flatpak.nixosModules.nix-flatpak
+				inputs.home-manager.nixosModules.default
 				inputs.stylix.nixosModules.stylix
 				inputs.niri.nixosModules.niri
 			];
