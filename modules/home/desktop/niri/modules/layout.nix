@@ -9,14 +9,13 @@
 
 			border = {
 				width = 4;
-				active-gradient = {
+				active.gradient = {
 					from = "#89b4fa";
 					to = "#cba6f7";
 					angle = 45;
 				};
-
-				inactive-color = "#45475a";
-				urgent-color = "#f38ba8";
+				inactive.color = "#45475a";
+				urgent.color = "#f38ba8";
 			};
 
 			tab-indicator = {

@@ -4,8 +4,8 @@
 		ipc = action: "noctalia-shell ipc call ${action}";
 		notifications = action: { spawn-sh = ipc action; };
 		in {
-			"Mod+N" = notifications "toggleHistory";
-			"Mod+Shift+N" = notifications "clear";
+			"Mod+N".action = notifications "toggleHistory";
+			"Mod+Shift+N".action = notifications "clear";
 		};
 	};
 }

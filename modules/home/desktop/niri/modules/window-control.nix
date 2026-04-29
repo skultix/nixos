@@ -35,20 +35,20 @@
 			"Mod+Shift+8" = move-column-to-workspace 8;
 			"Mod+Shift+9" = move-column-to-workspace 9;
 			# in/out of columns
-			"Mod+BracketLeft " = consume-or-expel-window "left";
+			"Mod+BracketLeft" = consume-or-expel-window "left";
 			"Mod+BracketRight" = consume-or-expel-window "right";
 			# resizing
-			"Mod+F" = { maximize-column = {}; };
-			"Mod+Shift+F" = { fullscreen-window = {}; };
-			"Mod+Minus" = { set-column-width = "-10%"; };
-			"Mod+Equal" = { set-column-width = "+10%"; };
-			"Mod+Shift+Minus" = { set-window-height = "-10%"; };
-			"Mod+Shift+Equal" = { set-window-height = "+10%"; };
+			"Mod+F".action = { maximize-column = {}; };
+			"Mod+Shift+F".action = { fullscreen-window = {}; };
+			"Mod+Minus".action = { set-column-width = "-10%"; };
+			"Mod+Equal".action = { set-column-width = "+10%"; };
+			"Mod+Shift+Minus".action = { set-window-height = "-10%"; };
+			"Mod+Shift+Equal".action = { set-window-height = "+10%"; };
 			# floating
-			"Mod+V" = { toggle-window-floating = {}; };
-			"Mod+Shift+V" = { switch-focus-between-floating-and-tiling = {}; };
+			"Mod+V".action = { toggle-window-floating = {}; };
+			"Mod+Shift+V".action = { switch-focus-between-floating-and-tiling = {}; };
 			# tabbed
-			"Mod+W" = { toggle-column-tabbed-display = {}; };
+			"Mod+W".action = { toggle-column-tabbed-display = {}; };
 		};
 	};
 }
