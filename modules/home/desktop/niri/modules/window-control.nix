@@ -11,6 +11,10 @@
 				repeat = false;
 				action.close-window = {};
 			};
+			"Mod+Shift+Q" = {
+				repeat = false;
+				action.spawn-sh = "kill $(niri msg --json focused-window | jq '.pid')";
+			};
 
 			# Window navigation
 			"Mod+H" = focus "column-left";
@@ -49,6 +53,8 @@
 			"Mod+Shift+V".action = { switch-focus-between-floating-and-tiling = {}; };
 			# tabbed
 			"Mod+W".action = { toggle-column-tabbed-display = {}; };
+			# center
+			"Mod+Shift+C".action = { center-window = {}; };
 		};
 	};
 }
