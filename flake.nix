@@ -14,6 +14,11 @@
 			inputs.darwin.follows = ""; # no need for apple stuff on nixos
 		};
 
+		claude-switch = {
+			url = "github:Marlstar/claude-switch-fish";
+			flake = false;
+		};
+
 		claude-desktop = {
 			url = "github:aaddrick/claude-desktop-debian";
 			inputs.nixpkgs.follows = "nixpkgs";

@@ -144,6 +144,22 @@
         "type": "github"
       }
     },
+    "claude-switch": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1778456138,
+        "narHash": "sha256-QybCV9hS1pIJP4RxBrveoQDIDXt4NuOKtkxY6heeLAI=",
+        "owner": "Marlstar",
+        "repo": "claude-switch-fish",
+        "rev": "1c07539cf19ea4acbe03701e47aad6602747aebe",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Marlstar",
+        "repo": "claude-switch-fish",
+        "type": "github"
+      }
+    },
     "curl-src": {
       "flake": false,
       "locked": {
@@ -794,6 +810,7 @@
       "inputs": {
         "agenix": "agenix",
         "claude-desktop": "claude-desktop",
+        "claude-switch": "claude-switch",
         "flatpak": "flatpak",
         "home-manager": "home-manager_2",
         "import-tree": "import-tree",
