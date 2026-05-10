@@ -1,5 +1,19 @@
 { ... }: {
 	programs.niri.settings = {
+		layout = {
+			preset-column-widths = let
+			prop = n: { proportion = n; };
+			in [
+				(prop (1. / 4.))
+				(prop (1. / 3.))
+				(prop (1. / 2.))
+				(prop (2. / 3.))
+				(prop (3. / 4.))
+				(prop (1. / 1.))
+			];
+			default-column-width = { proportion = (1. / 2.); };
+		};
+
 		binds = let
 		focus = direction: { action."focus-${direction}" = {}; };
 		move = direction: { action."move-${direction}" = {}; };
@@ -23,6 +37,8 @@
 			"Mod+L" = focus "column-right";
 			"Mod+Home" = focus "column-first";
 			"Mod+End" = focus "column-last";
+			"Mod+U" = focus "workspace-up";
+			"Mod+D" = focus "workspace-down";
 			# Window movement
 			"Mod+Shift+H" = move "column-left";
 			"Mod+Shift+J" = move "window-down";
@@ -38,6 +54,8 @@
 			"Mod+Shift+7" = move-column-to-workspace 7;
 			"Mod+Shift+8" = move-column-to-workspace 8;
 			"Mod+Shift+9" = move-column-to-workspace 9;
+			"Mod+Shift+U".action = { move-column-to-workspace-up = {}; };
+			"Mod+Shift+D".action = { move-column-to-workspace-down = {}; };
 			# in/out of columns
 			"Mod+BracketLeft" = consume-or-expel-window "left";
 			"Mod+BracketRight" = consume-or-expel-window "right";
@@ -46,13 +64,16 @@
 			"Mod+Shift+F".action = { fullscreen-window = {}; };
 			"Mod+Minus".action = { set-column-width = "-10%"; };
 			"Mod+Equal".action = { set-column-width = "+10%"; };
+			"Mod+W".action = { switch-preset-column-width = {}; };
+			"Mod+Shift+W".action = { switch-preset-column-width-back = {}; };
+			"Mod+Control+W".action = { expand-column-to-available-width = {}; };
 			"Mod+Shift+Minus".action = { set-window-height = "-10%"; };
 			"Mod+Shift+Equal".action = { set-window-height = "+10%"; };
 			# floating
 			"Mod+V".action = { toggle-window-floating = {}; };
 			"Mod+Shift+V".action = { switch-focus-between-floating-and-tiling = {}; };
 			# tabbed
-			"Mod+W".action = { toggle-column-tabbed-display = {}; };
+			"Mod+T".action = { toggle-column-tabbed-display = {}; };
 			# center
 			"Mod+Shift+C".action = { center-window = {}; };
 		};
