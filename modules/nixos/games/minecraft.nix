@@ -31,6 +31,9 @@ in {
 		++ lib.optional minecraft.clients.lunar inputs.lunar-client.packages.${pkgs.stdenv.hostPlatform.system}.default
 		;
 
-		networking.firewall.allowedTCPPorts = [ 25565 25575 ];
+		networking.firewall = {
+			allowedTCPPorts = [ 25565 25575 ];
+			allowedUDPPortRanges = [{from=19132; to=19132;}];
+		};
 	};
 }
