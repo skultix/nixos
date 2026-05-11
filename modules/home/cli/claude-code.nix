@@ -7,9 +7,13 @@
 		claude-monitor
 	];
 
-	# claude-switch (my script)
-	programs.fish.plugins = [{
-		name = "claude-switch";
-		src = inputs.claude-switch;
-	}];
+	programs.fish = {
+		shellAbbrs.ccs = "claude-switch";
+
+		# claude-switch (my script)
+		programs.fish.plugins = [{
+			name = "claude-switch";
+			src = inputs.claude-switch;
+		}];
+	};
 }
