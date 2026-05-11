@@ -147,11 +147,11 @@
     "claude-switch": {
       "flake": false,
       "locked": {
-        "lastModified": 1778456138,
-        "narHash": "sha256-QybCV9hS1pIJP4RxBrveoQDIDXt4NuOKtkxY6heeLAI=",
+        "lastModified": 1778458255,
+        "narHash": "sha256-KwuCeePqmYkXeT8GykHk9R0ZlAn+eXJhVrQ4FjiuWvM=",
         "owner": "Marlstar",
         "repo": "claude-switch-fish",
-        "rev": "1c07539cf19ea4acbe03701e47aad6602747aebe",
+        "rev": "234b360f91e6c901d82e931da532c1cdd9e1764d",
         "type": "github"
       },
       "original": {

@@ -11,7 +11,7 @@
 		shellAbbrs.ccs = "claude-switch";
 
 		# claude-switch (my script)
-		programs.fish.plugins = [{
+		plugins = [{
 			name = "claude-switch";
 			src = inputs.claude-switch;
 		}];
