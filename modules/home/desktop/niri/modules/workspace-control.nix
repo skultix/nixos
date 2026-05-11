@@ -13,6 +13,9 @@
 			"Mod+7" = focus-workspace 7;
 			"Mod+8" = focus-workspace 8;
 			"Mod+9" = focus-workspace 9;
+
+			"Mod+Control+U".action.move-workspace-up = {};
+			"Mod+Control+D".action.move-workspace-down = {};
 		};
 	};
 }
