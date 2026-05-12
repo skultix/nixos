@@ -518,7 +518,7 @@
 		"criticalUrgencyDuration": 5,
 		"clearDismissed": true,
 		"saveToHistory": {
-			"low": true,
+			"low": false,
 			"normal": true,
 			"critical": true
 		},
