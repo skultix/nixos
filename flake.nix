@@ -68,7 +68,6 @@
 			specialArgs = { inherit inputs; };
 			modules = [
 				./hosts/${name}/configuration.nix
-				./modules/unfree.nix
 				{ networking.hostName = name; }
 
 				(inputs.import-tree ./modules/nixos)
