@@ -1,4 +1,4 @@
-{ ... }: {
+{ config, ... }: {
 	programs.niri.settings = {
 		window-rules = [
 			{ # Browser popout windows
@@ -24,6 +24,6 @@
 			}
 		];
 
-		binds."Mod+B".action.spawn-sh = "bitwarden";
+		binds."Mod+B".action.spawn-sh = config.cfg.programs.password-manager;
 	};
 }

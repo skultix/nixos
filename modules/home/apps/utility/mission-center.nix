@@ -1,4 +1,6 @@
 { pkgs, ... }: {
+	cfg.programs.system-monitor = "missioncenter";
+
 	home.packages = with pkgs; [
 		mission-center
 	];

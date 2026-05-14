@@ -1,4 +1,6 @@
 { pkgs, ... }: {
+	cfg.programs.launcher = "vicinae toggle";
+
 	programs.vicinae = {
 		enable = true;
 		systemd.enable = true;

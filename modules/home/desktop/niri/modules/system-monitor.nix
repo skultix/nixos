@@ -1,6 +1,6 @@
-{ ... }: {
+{ config, ... }: {
 	programs.niri.settings = {
-		binds."Mod+Shift+Escape".action.spawn-sh = "missioncenter";
+		binds."Mod+Shift+Escape".action.spawn-sh = config.cfg.programs.system-monitor;
 
 		window-rules = [{
 			matches = [

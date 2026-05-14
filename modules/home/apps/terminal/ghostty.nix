@@ -1,4 +1,6 @@
 { ... }: {
+	cfg.programs.terminal = "ghostty";
+
 	programs.ghostty = {
 		enable = true;
 
