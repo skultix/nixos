@@ -789,6 +789,26 @@
         "type": "github"
       }
     },
+    "paseo": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778693697,
+        "narHash": "sha256-lyZJsNaceTFU2czNKoqf7xoCAjlB9X47ADs0eCsFCS8=",
+        "owner": "getpaseo",
+        "repo": "paseo",
+        "rev": "44292b2b6919da98d83d9014d5b4edc8555ee045",
+        "type": "github"
+      },
+      "original": {
+        "owner": "getpaseo",
+        "repo": "paseo",
+        "type": "github"
+      }
+    },
     "re2-src": {
       "flake": false,
       "locked": {
@@ -819,6 +839,7 @@
         "niri": "niri",
         "nixpkgs": "nixpkgs_3",
         "noctalia": "noctalia",
+        "paseo": "paseo",
         "steam-config": "steam-config",
         "stylix": "stylix",
         "tinted-schemes": "tinted-schemes_2"
