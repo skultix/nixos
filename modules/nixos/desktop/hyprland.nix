@@ -1,12 +1,12 @@
 { pkgs, ... }: {
-    programs.hyprland = {
+	programs.hyprland = {
 		enable = true;
 		xwayland.enable = true;
-    };
+	};
 
-    environment.systemPackages = with pkgs; [ kitty ];
+	environment.systemPackages = with pkgs; [ kitty ];
 
-    environment.sessionVariables = {
-        NIXOS_OZONE_WL = "1";
-    };
+	environment.sessionVariables = {
+		NIXOS_OZONE_WL = "1";
+	};
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ ... }: {
 	imports = [ ./hardware-configuration.nix ];
 
 	# <== Already modularised ==>
@@ -27,17 +27,8 @@
 			};
 		};
 	};
-	
-	powerManagement.cpuFreqGovernor = "performance";
 
-	# <== To-be-modularised/organised ==>
-	environment.systemPackages = with pkgs; [
-		vim
-		neovim
-		wget
-		stow
-		rustup
-	];
+	powerManagement.cpuFreqGovernor = "performance";
 
 	# DO NOT CHANGE THIS, LIKE, EVER!!!
 	system.stateVersion = "25.11";
