@@ -1,9 +1,5 @@
-{ ... }: {
-	wayland.windowManager.hyprland.settings = {
-		"$fileManager" = "nautilus";
-
-		bind = [
-			"$mainMod, E, exec, $fileManager"
-		];
-	};
+{ config, ... }: {
+	wayland.windowManager.hyprland.settings.bind = [
+		"$mainMod, E, exec, ${config.cfg.programs.file-manager}"
+	];
 }

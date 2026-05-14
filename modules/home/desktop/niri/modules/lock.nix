@@ -1,7 +1,3 @@
-{ ... }: {
-	programs.niri.settings = let
-	lock-cmd = "noctalia-shell ipc call lockScreen lock";
-	in {
-		binds."Mod+Control+L".action.spawn-sh = lock-cmd;
-	};
+{ config, ... }: {
+	programs.niri.settings.binds."Mod+Control+L".action.spawn-sh = config.cfg.programs.lock;
 }

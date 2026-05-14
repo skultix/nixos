@@ -1,9 +1,5 @@
 { ... }: {
-	wayland.windowManager.hyprland.settings = {
-		"$bluetoothmenu" = "kitty --class bluetui bluetui";
-
-		bind = [
-			"$mainMod, B, exec, $bluetoothmenu"
-		];
-	};
+	wayland.windowManager.hyprland.settings.bind = [
+		"$mainMod, B, exec, kitty --class bluetui bluetui"
+	];
 }

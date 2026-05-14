@@ -1,11 +1,6 @@
-{ ... }: {
-	wayland.windowManager.hyprland.settings = {
-		"$menu" = "vicinae open";
-		"$cmdmenu" = "vicinae open";
-
-		bind = [
-			"$mainMod, space, exec, $menu"
-			"$shiftMod, space, exec, $cmdmenu"
-		];
-	};
+{ config, ... }: {
+	wayland.windowManager.hyprland.settings.bind = [
+		"$mainMod, space, exec, ${config.cfg.programs.launcher}"
+		"$shiftMod, space, exec, ${config.cfg.programs.launcher}"
+	];
 }

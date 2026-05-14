@@ -1,4 +1,6 @@
 { inputs, pkgs, ... }: {
+	cfg.programs.lock = "noctalia-shell ipc call lockScreen lock";
+
 	imports = [
 		inputs.noctalia.homeModules.default
 	];
