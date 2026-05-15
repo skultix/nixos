@@ -19,4 +19,9 @@
 			"x-scheme-handler/unknown" = browser;
 		};
 	};
+
+	programs.niri.settings.window-rules = [{
+		matches = [ { app-id = "vivaldi-stable"; at-startup = true; } ];
+		open-on-workspace = "browser";
+	}];
 }

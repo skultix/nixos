@@ -15,4 +15,15 @@
 	xdg.autostart.entries = [
 		"${pkgs.discord}/share/applications/discord.desktop"
 	];
+
+	programs.niri.settings.window-rules = [
+		{ # Always open on comms workspace
+			matches = [ { app-id = "discord"; } ];
+			open-on-workspace = "communication";
+		}
+		{ # Don't focus when autostarting at launch
+			matches = [ { app-id = "discord"; at-startup = true; } ];
+			open-focused = false;
+		}
+	];
 }
