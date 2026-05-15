@@ -24,6 +24,11 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		eh = {
+			url = "github:notashelf/eh";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		flatpak.url = "github:gmodena/nix-flatpak";
 
 		lunar-client ={
@@ -78,6 +83,7 @@
 				(inputs.import-tree ./modules/nixos)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)
 				inputs.agenix.nixosModules.default
+				inputs.eh.nixosModules.default
 				inputs.flatpak.nixosModules.nix-flatpak
 				inputs.home-manager.nixosModules.default
 				inputs.paseo.nixosModules.default

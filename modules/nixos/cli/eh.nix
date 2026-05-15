@@ -1,0 +1,5 @@
+{ ... }: {
+	programs.eh = {
+		enable = true;
+	};
+}

@@ -177,6 +177,26 @@
         "type": "github"
       }
     },
+    "eh": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1778749419,
+        "narHash": "sha256-SayfylyfDvjOwMj4hfkvM8lY6CAdWju741FAhq/nYus=",
+        "owner": "notashelf",
+        "repo": "eh",
+        "rev": "3475917b4276cbc8b668f2ddf3b4f4214d91ca8f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "notashelf",
+        "repo": "eh",
+        "type": "github"
+      }
+    },
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
@@ -831,6 +851,7 @@
         "agenix": "agenix",
         "claude-desktop": "claude-desktop",
         "claude-switch": "claude-switch",
+        "eh": "eh",
         "flatpak": "flatpak",
         "home-manager": "home-manager_2",
         "import-tree": "import-tree",
