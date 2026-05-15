@@ -241,15 +241,6 @@
 				format = "[$symbol($version)]($style) ";
 				symbol = " ";
 			};
-			# [custom.hyprland]
-			# command = "hyprland --version | sed -E "s/Hyprland ([0-9\.]*) .*/\1/g" | sed -n 1p"
-			# # command = "echo hyprland"
-			# detect_files = ["hyprland.conf"]
-			# style = "bold #00C3E4"
-			# format = "[$symbol$output]($style) "
-			# symbol = " "
-			# os = "linux"
-
 		};
 	};
 }

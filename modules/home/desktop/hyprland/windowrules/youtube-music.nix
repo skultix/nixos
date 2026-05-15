@@ -1,9 +1,0 @@
-{ ... }: {
-	wayland.windowManager.hyprland.settings = {
-		windowrule = [{
-			name = "YouTube Music Desktop";
-			workspace = "9 silent";
-			"match:class" = "com.github.th_ch.youtube_music";
-		}];
-	};
-}

@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, config, ... }: {
 	cfg.programs.power-menu = "wleave";
 
 	programs.wleave = {
@@ -16,7 +16,7 @@
 			buttons = [
 				{
 					label = "lock";
-					action = "hyprlock";
+					action = config.cfg.programs.lock;
 					text = "Lock";
 					keybind = "l";
 					icon = "${pkgs.wleave}/share/wleave/icons/lock.svg";
@@ -32,8 +32,8 @@
 					label = "logout";
 					action = [
 						{
-							"$DESKTOP_SESSION" = "hyprland";
-							shell = "hyprshutdown";
+							"$DESKTOP_SESSION" = "niri";
+							shell = "niri msg action quit";
 						}
 					];
 					text = "Logout";

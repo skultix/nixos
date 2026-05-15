@@ -1,9 +1,0 @@
-{ ... }: {
-	wayland.windowManager.hyprland.settings = {
-		windowrule = [{
-			name = "Discord";
-			"match:class" = "^(discord)$";
-			workspace = "2 silent";
-		}];
-	};
-}
