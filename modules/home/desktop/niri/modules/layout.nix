@@ -32,6 +32,18 @@
 			struts = { # extra space
 				top = 4;
 			};
+
+			preset-column-widths = let
+			prop = n: { proportion = n; };
+			in [
+				(prop (1. / 4.))
+				(prop (1. / 3.))
+				(prop (1. / 2.))
+				(prop (2. / 3.))
+				(prop (3. / 4.))
+				(prop (1. / 1.))
+			];
+			default-column-width = { proportion = (1. / 2.); };
 		};
 	};
 }
