@@ -3,7 +3,10 @@
 
 	# <== Already modularised ==>
 	cfg = {
-		hardware.intel-graphics.enable = true;
+		hardware = {
+			monitors.eDP-1 = { width = 1920; height = 1200; };
+			intel-graphics.enable = true;
+		};
 
 		users.main.enable = true;
 

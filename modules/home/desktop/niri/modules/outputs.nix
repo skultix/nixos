@@ -1,18 +1,5 @@
-{ ... }: {
-	programs.niri.settings = {
-		# TODO: make monitors a system configuration.nix option
-		outputs.eDP-1 = { # Laptop screen
-			mode = {
-				width = 1920;
-				height = 1200;
-			};
-		};
-
-		outputs.DP-6 = { # Monitor
-			mode = {
-				width = 3440;
-				height = 1440;
-			};
-		};
-	};
+{ osConfig, lib, ... }: let
+monitor-map = lib.mapAttrs' (monitor: cfg: lib.nameValuePair monitor { mode.width = 1920; mode.height = 1080; });
+in {
+	programs.niri.settings.outputs = monitor-map osConfig.cfg.hardware.monitors;
 }
