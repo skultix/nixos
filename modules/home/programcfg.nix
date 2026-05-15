@@ -11,7 +11,7 @@ in {
 		system-monitor = opt str;
 		lock = opt str;
 		power-menu = opt str;
-		clipboard-history = opt str;
+		clipboard-manager = opt str;
 		notifications.toggle = opt str;
 		notifications.clear = opt str;
 	};

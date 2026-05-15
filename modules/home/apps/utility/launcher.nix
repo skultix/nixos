@@ -24,7 +24,7 @@
 
 	cfg.programs = {
 		launcher = "vicinae toggle";
-		clipboard-history = "vicinae deeplink vicinae://launch/clipboard/history";
+		clipboard-manager = "vicinae deeplink vicinae://launch/clipboard/history";
 	};
 
 	home.packages = [

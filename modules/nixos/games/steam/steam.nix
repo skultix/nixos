@@ -31,11 +31,13 @@
 			protonup-rs
 		];
 
-		programs.niri.settings.window-rules = [
-			{
-				matches = [ { app-id = "steam"; title = "Steam"; } ];
-				open-fullscreen = false;
-			}
-		];
+		home-manager.users."themarlstar".imports = [{
+			programs.niri.settings.window-rules = [
+				{
+					matches = [ { app-id = "steam"; title = "Steam"; } ];
+					open-fullscreen = false;
+				}
+			];
+		}];
 	};
 }

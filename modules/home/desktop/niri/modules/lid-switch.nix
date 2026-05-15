@@ -1,7 +1,8 @@
 { config, ... }: {
 	programs.niri.settings = {
 		switch-events = {
-			lid-close.action.spawn-sh = config.cfg.programs.lock;
+			# can't use spawn-sh here for some reason
+			lid-close.action.spawn = [ "sh" "-c" config.cfg.programs.lock ];
 		};
 	};
 }
