@@ -31,7 +31,7 @@
 			protonup-rs
 		];
 
-		home-manager.users."themarlstar".imports = [{
+		home-modules = [{
 			programs.niri.settings.window-rules = [
 				{
 					matches = [ { app-id = "steam"; title = "Steam"; } ];
