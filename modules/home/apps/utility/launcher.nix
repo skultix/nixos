@@ -1,6 +1,4 @@
 { pkgs, ... }: {
-	cfg.programs.launcher = "vicinae toggle";
-
 	programs.vicinae = {
 		enable = true;
 		systemd.enable = true;
@@ -22,6 +20,11 @@
 				"core:refresh-apps"
 			];
 		};
+	};
+
+	cfg.programs = {
+		launcher = "vicinae toggle";
+		clipboard-history = "vicinae deeplink vicinae://launch/clipboard/history";
 	};
 
 	home.packages = [

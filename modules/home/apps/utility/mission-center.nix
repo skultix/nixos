@@ -10,4 +10,11 @@
 		performance-sliding-graphs = true;
 		performance-smooth-graphs = true;
 	};
+
+	programs.niri.settings.window-rules = [
+		{ # Don't open fullscreen
+			matches = [ { app-id = "io.missioncenter.MissionCenter"; } ];
+			open-fullscreen = false;
+		}
+	];
 }

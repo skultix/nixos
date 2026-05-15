@@ -1,5 +1,11 @@
 { inputs, pkgs, ... }: {
-	cfg.programs.lock = "noctalia-shell ipc call lockScreen lock";
+	cfg.programs = let
+	ipc = action: "noctalia-shell ipc call ${action}";
+	in {
+		lock = ipc "lockScreen lock";
+		notifications.toggle = ipc "notifications toggleHistory";
+		notifications.clear = ipc "notifications clear";
+	};
 
 	imports = [
 		inputs.noctalia.homeModules.default

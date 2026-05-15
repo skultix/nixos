@@ -30,5 +30,12 @@
 		environment.systemPackages = with pkgs; [
 			protonup-rs
 		];
+
+		programs.niri.settings.window-rules = [
+			{
+				matches = [ { app-id = "steam"; title = "Steam"; } ];
+				open-fullscreen = false;
+			}
+		];
 	};
 }

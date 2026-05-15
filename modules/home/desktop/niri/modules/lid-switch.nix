@@ -1,7 +1,7 @@
-{ ... }: {
+{ config, ... }: {
 	programs.niri.settings = {
 		switch-events = {
-			lid-close.action.spawn = [ "noctalia-shell" "ipc" "call" "lockScreen" "lock" ];
+			lid-close.action.spawn-sh = config.cfg.programs.lock;
 		};
 	};
 }
