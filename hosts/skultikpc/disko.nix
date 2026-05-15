@@ -41,6 +41,10 @@
 									mountpoint = "/tmp";
 									mountOptions = [ "relatime" "ssd" "discard=async" "space_cache=v2" "compress=zstd" ];
 								};
+								"@nix" = {
+									mountpoint = "/nix";
+									mountOptions = [ "relatime" "ssd" "discard=async" "space_cache=v2" "compress=zstd" ];
+								};
 							};
 						};
 					};
