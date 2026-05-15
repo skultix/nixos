@@ -1,5 +1,9 @@
-{ ... }: {
-	imports = [ ./hardware-configuration.nix ];
+{ inputs, ... }: {
+	imports = [
+		./hardware-configuration.nix
+		inputs.disko.nixosModules.default
+		./disko.nix
+	];
 
 	# <== Already modularised ==>
 	cfg = {

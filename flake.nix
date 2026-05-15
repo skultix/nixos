@@ -29,6 +29,11 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		disko = {
+			url = "github:nix-community/disko";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		flatpak.url = "github:gmodena/nix-flatpak";
 
 		lunar-client ={
@@ -79,6 +84,7 @@
 			modules = [
 				./hosts/${name}/configuration.nix
 				{ networking.hostName = name; }
+				(nixpkgs.lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "MYUSERNAME" ])
 
 				(inputs.import-tree ./modules/nixos)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)
