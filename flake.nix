@@ -51,8 +51,9 @@
 		};
 
 		millennium = {
-			url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
-			inputs.nixpkgs.follows = "nixpkgs";
+			url = "github:SteamClientHomebrew/Millennium/next?dir=packages/nix";
+			# doesn't follow nixpkgs as this causes hash mismatches
+			# https://github.com/SteamClientHomebrew/Millennium/issues/551#issuecomment-4463419857
 		};
 
 		paseo = {
