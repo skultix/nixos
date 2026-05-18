@@ -90,7 +90,7 @@
 			modules = [
 				./hosts/${name}/configuration.nix
 				{ networking.hostName = name; }
-				(nixpkgs.lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "MYUSERNAME" ])
+				(nixpkgs.lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "themarlstar" ])
 
 				(inputs.import-tree ./modules/nixos)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)
