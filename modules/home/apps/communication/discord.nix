@@ -17,9 +17,10 @@
 	];
 
 	programs.niri.settings.window-rules = [
-		{ # Always open on comms workspace
+		{ # Always open on comms workspace & maximised
 			matches = [ { app-id = "discord"; } ];
 			open-on-workspace = "communication";
+			open-maximized = true;
 		}
 		{ # Don't focus when autostarting at launch
 			matches = [ { app-id = "discord"; at-startup = true; } ];
