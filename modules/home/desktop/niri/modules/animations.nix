@@ -3,11 +3,13 @@ ease-out-expo = duration: {
 	easing.curve = "ease-out-expo";
 	easing.duration-ms = duration;
 };
+
+window-open-close-anim-duration = 1000;
 in {
 	programs.niri.settings.animations = {
 		window-open = {
 			enable = true;
-			kind = ease-out-expo 1400;
+			kind = ease-out-expo window-open-close-anim-duration;
 			custom-shader = ''
 			float ease_curve(float x) {
                 return x < 0.5 ? 4.0*x*x*x : 1.0 - pow(-2.0*x + 2.0, 3.0)/2.0;
@@ -59,7 +61,7 @@ in {
 		};
 		window-close = {
 			enable = true;
-			kind = ease-out-expo 1400;
+			kind = ease-out-expo window-open-close-anim-duration;
 			custom-shader = ''
             float ease_curve(float x) {
                 return x < 0.5 ? 4.0*x*x*x : 1.0 - pow(-2.0*x + 2.0, 3.0)/2.0;
