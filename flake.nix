@@ -14,6 +14,11 @@
 			inputs.darwin.follows = ""; # no need for apple stuff on nixos
 		};
 
+		cachyos-kernel = {
+			url = "github:xddxdd/nix-cachyos-kernel/release";
+			# do not override nixpkgs
+		};
+
 		claude-switch = {
 			url = "github:Marlstar/claude-switch-fish";
 			flake = false;
@@ -26,6 +31,11 @@
 
 		eh = {
 			url = "github:notashelf/eh";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
+		disko = {
+			url = "github:nix-community/disko";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
@@ -46,8 +56,9 @@
 		};
 
 		millennium = {
-			url = "github:SteamClientHomebrew/Millennium?dir=packages/nix";
-			inputs.nixpkgs.follows = "nixpkgs";
+			url = "github:SteamClientHomebrew/Millennium/next?dir=packages/nix";
+			# doesn't follow nixpkgs as this causes hash mismatches
+			# https://github.com/SteamClientHomebrew/Millennium/issues/551#issuecomment-4463419857
 		};
 
 		paseo = {
@@ -79,6 +90,7 @@
 			modules = [
 				./hosts/${name}/configuration.nix
 				{ networking.hostName = name; }
+				(nixpkgs.lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "themarlstar" ])
 
 				(inputs.import-tree ./modules/nixos)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)

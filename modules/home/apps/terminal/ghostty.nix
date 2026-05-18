@@ -1,5 +1,5 @@
 { ... }: {
-	cfg.programs.terminal = "ghostty";
+	cfg.programs.terminal = "ghostty +new-window";
 
 	programs.ghostty = {
 		enable = true;

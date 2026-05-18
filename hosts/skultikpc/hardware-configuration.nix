@@ -13,26 +13,8 @@
   boot.kernelModules = [ "kvm-amd" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-label/NIXROOT";
-      fsType = "btrfs";
-      options = [ "subvol=@" ];
-    };
-
-  fileSystems."/home" =
-    { device = "/dev/disk/by-label/NIXROOT";
-      fsType = "btrfs";
-      options = [ "subvol=@home" ];
-    };
-
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-label/NIXBOOT";
-      fsType = "vfat";
-      options = [ "fmask=0022" "dmask=0022" ];
-    };
-
   swapDevices =
-    [ { device = "/dev/disk/by-label/NIXSWAP"; }
+    [ { device = "/dev/disk/by-uuid/09baba28-52c3-4fec-8c1b-02c1f5fe2bc3"; }
     ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
