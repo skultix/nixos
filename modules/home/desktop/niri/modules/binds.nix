@@ -78,6 +78,7 @@ in {
 		(bind-sh "Mod+C" program.clipboard-manager)
 		(bind-sh "Mod+Shift+Escape" program.system-monitor)
 		(bind-sh "Mod+Control+L" program.lock)
+		(bind-sh "Mod+S" program.bar.peek)
 
 		# Screenshot
 		(bind "Mod+Shift+S" "screenshot" {})

@@ -3,8 +3,15 @@
 	ipc = action: "noctalia-shell ipc call ${action}";
 	in {
 		lock = ipc "lockScreen lock";
-		notifications.toggle = ipc "notifications toggleHistory";
-		notifications.clear = ipc "notifications clear";
+		notifications = {
+			toggle = ipc "notifications toggleHistory";
+			clear = ipc "notifications clear";
+		};
+		bar = {
+			peek = ipc "bar peek";
+			show = ipc "bar show";
+			hide = ipc "bar hide";
+		};
 	};
 
 	imports = [

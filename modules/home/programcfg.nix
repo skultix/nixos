@@ -12,7 +12,14 @@ in {
 		lock = opt str;
 		power-menu = opt str;
 		clipboard-manager = opt str;
-		notifications.toggle = opt str;
-		notifications.clear = opt str;
+		notifications = {
+			toggle = opt str;
+			clear = opt str;
+		};
+		bar = {
+			show = opt str;
+			hide = opt str;
+			peek = opt str;
+		};
 	};
 }
