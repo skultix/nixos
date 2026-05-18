@@ -14,6 +14,11 @@
 			inputs.darwin.follows = ""; # no need for apple stuff on nixos
 		};
 
+		cachyos-kernel = {
+			url = "github:xddxdd/nix-cachyos-kernel/release";
+			# do not override nixpkgs
+		};
+
 		claude-switch = {
 			url = "github:Marlstar/claude-switch-fish";
 			flake = false;

@@ -7,6 +7,12 @@
 
 	# <== Already modularised ==>
 	cfg = {
+		kernel = {
+			processorOpt = "zen4";
+			hzTicks = 1000;
+			extraParams = ["amd_pstate=active"];
+		};
+
 		hardware = {
 			monitors.DP-6 = { width = 3440; height = 1440; };
 			nvidia.enable = true;
