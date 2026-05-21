@@ -99,14 +99,14 @@
 			],
 			"right": [
 				{
-					"compactMode": false,
+					"compactMode": true,
 					"compactShowAlbumArt": true,
 					"compactShowVisualizer": false,
 					"hideMode": "hidden",
 					"hideWhenIdle": false,
 					"id": "MediaMini",
 					"maxWidth": 200,
-					"panelShowAlbumArt": false,
+					"panelShowAlbumArt": true,
 					"panelShowVisualizer": true,
 					"scrollingMode": "hover",
 					"showAlbumArt": true,
