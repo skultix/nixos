@@ -8,12 +8,11 @@ in {
 
 		monado = {
 			enable = mkDefaultOption vrcfg.enable;
-			defaultRuntime = mkDefaultOption (!vrcfg.wivrn.enable);
+			defaultRuntime = mkDefaultOption true;
 		};
 
 		wivrn = {
 			enable = mkDefaultOption vrcfg.enable;
-			defaultRuntime = mkDefaultOption vrcfg.wivrn.enable;
 		};
 
 		xrizer.enable = mkDefaultOption true;
@@ -22,11 +21,6 @@ in {
 	};
 
 	config = lib.mkIf vrcfg.enable {
-		assertions = [{
-			assertion = !(vrcfg.monado.defaultRuntime && vrcfg.wivrn.defaultRuntime);
-			message = "you cannot set multiple default OpenXR runtimes!";
-		}];
-
 		environment.systemPackages = []
 		++ lib.optional vrcfg.xrizer.enable pkgs.xrizer
 		++ lib.optional vrcfg.sidequest.enable pkgs.sidequest
@@ -34,7 +28,7 @@ in {
 
 		services.monado = lib.mkIf vrcfg.monado.enable {
 			enable = true;
-			defaultRuntime = (!vrcfg.wivrn.enable) || vrcfg.monado.defaultRuntime;
+			defaultRuntime = vrcfg.monado.defaultRuntime;
 		};
 
 		services.wivrn = lib.mkIf vrcfg.wivrn.enable {
@@ -44,7 +38,6 @@ in {
 				package = config.programs.steam.package;
 				importOXRRuntimes = true;
 			};
-			defaultRuntime = true;
 		};
 	};
 }
