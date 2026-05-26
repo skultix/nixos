@@ -30,7 +30,9 @@
 		};
 
 		home-manager = {
-			extraSpecialArgs = { inherit inputs; };
+			extraSpecialArgs = {
+				inherit inputs;
+			};
 			users = {
 				"${config.cfg.users.main.username}" = import ../../../home.nix;
 			};

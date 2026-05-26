@@ -800,9 +800,26 @@
         "nixpkgs": "nixpkgs_5",
         "noctalia": "noctalia",
         "paseo": "paseo",
+        "stable": "stable",
         "steam-config": "steam-config",
         "stylix": "stylix",
         "tinted-schemes": "tinted-schemes_2"
+      }
+    },
+    "stable": {
+      "locked": {
+        "lastModified": 1779467186,
+        "narHash": "sha256-nOesoDCiXcUftqbRBMz9tt4blI5PvljMWbm3kuCA+0s=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "b77b3de8775677f84492abe84635f87b0e153f0f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-25.11",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "steam-config": {

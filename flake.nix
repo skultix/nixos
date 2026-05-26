@@ -3,6 +3,7 @@
 
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+		stable.url = "github:nixos/nixpkgs/nixos-25.11";
 
 		home-manager = {
 			url = "github:nix-community/home-manager";
@@ -84,7 +85,7 @@
 		import-tree.url = "github:vic/import-tree";
 	};
 
-	outputs = { self, nixpkgs, ... }@inputs: let
+	outputs = { self, nixpkgs, stable, ... }@inputs: let
 		mkSystem = name: nixpkgs.lib.nixosSystem {
 			specialArgs = {
 				inherit inputs;
@@ -98,6 +99,7 @@
 				./modules/unfree.nix
 				(inputs.import-tree ./modules/apps)
 				(inputs.import-tree ./modules/appearance)
+				(inputs.import-tree ./modules/cli)
 				(inputs.import-tree ./modules/nixos)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)
 				inputs.agenix.nixosModules.default
