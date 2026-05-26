@@ -1,6 +1,6 @@
-{ pkgs, ... }: let
+{ home, pkgs, ... }: let
 flags = "--password-store=gnome-libsecret";
-in {
+in home {
 	home.packages = with pkgs; [
 		(symlinkJoin {
 			name = "signal-desktop";
