@@ -95,6 +95,7 @@
 				{ networking.hostName = name; }
 				(nixpkgs.lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "themarlstar" ])
 
+				./modules/unfree.nix
 				(inputs.import-tree ./modules/apps)
 				(inputs.import-tree ./modules/nixos)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)
