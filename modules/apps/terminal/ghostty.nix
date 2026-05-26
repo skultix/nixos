@@ -1,4 +1,4 @@
-{ ... }: {
+{ home, ... }: home {
 	cfg.programs.terminal = "ghostty +new-window";
 
 	programs.ghostty = {
