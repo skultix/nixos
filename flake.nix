@@ -82,6 +82,11 @@
 			url = "github:tinted-theming/schemes";
 		};
 
+		vercel-cli = {
+			url = "github:marlstar/vercel-cli-flake";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		import-tree.url = "github:vic/import-tree";
 	};
 

@@ -1,5 +1,5 @@
-{ home, stable, ... }: home {
+{ home, inputs, pkgs, ... }: home {
 	home.packages = [
-		stable.nodePackages.vercel
+		inputs.vercel-cli.packages.${pkgs.stdenv.hostPlatform.system}.default
 	];
 }

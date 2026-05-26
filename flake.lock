@@ -803,7 +803,8 @@
         "stable": "stable",
         "steam-config": "steam-config",
         "stylix": "stylix",
-        "tinted-schemes": "tinted-schemes_2"
+        "tinted-schemes": "tinted-schemes_2",
+        "vercel-cli": "vercel-cli"
       }
     },
     "stable": {
@@ -1036,6 +1037,26 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "vercel-cli": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1779835652,
+        "narHash": "sha256-HqFeMHlPCDZrjZPpRuFVFNjcy3HJX77QP3aGYoWMVx0=",
+        "owner": "marlstar",
+        "repo": "vercel-cli-flake",
+        "rev": "9963b998d530b8d079da0f94bcec88911c08f401",
+        "type": "github"
+      },
+      "original": {
+        "owner": "marlstar",
+        "repo": "vercel-cli-flake",
         "type": "github"
       }
     },
