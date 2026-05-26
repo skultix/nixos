@@ -1,6 +1,6 @@
-{ lib, pkgs, ... }: let
+{ home, pkgs, ... }: let
 tomlFormat = pkgs.formats.toml {};
-in {
+in home {
 	home.packages = with pkgs; [ bluetui ];
 
 	xdg.configFile."bluetui/config.toml".source = tomlFormat.generate "config.toml" {

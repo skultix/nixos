@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ home, pkgs, ... }: home {
 	programs.vicinae = {
 		enable = true;
 		systemd.enable = true;

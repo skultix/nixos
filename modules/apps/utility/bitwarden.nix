@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ home, pkgs, ... }: home {
 	cfg.programs.password-manager = "bitwarden";
 
 	home.packages = with pkgs; [

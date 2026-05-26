@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ home, pkgs, ... }: home {
 	cfg.programs.file-manager = "nautilus";
 
 	home.packages = with pkgs; [
