@@ -86,7 +86,10 @@
 
 	outputs = { self, nixpkgs, ... }@inputs: let
 		mkSystem = name: nixpkgs.lib.nixosSystem {
-			specialArgs = { inherit inputs; };
+			specialArgs = {
+				inherit inputs;
+				home = tbl: { hm = tbl; };
+			};
 			modules = [
 				./hosts/${name}/configuration.nix
 				{ networking.hostName = name; }

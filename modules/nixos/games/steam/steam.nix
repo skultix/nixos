@@ -31,13 +31,11 @@
 			protonup-rs
 		];
 
-		home-modules = [{
-			programs.niri.settings.window-rules = [
-				{
-					matches = [ { app-id = "steam"; title = "Steam"; } ];
-					open-fullscreen = false;
-				}
-			];
-		}];
+		hm.programs.niri.settings.window-rules = [
+			{
+				matches = [ { app-id = "steam"; title = "Steam"; } ];
+				open-fullscreen = false;
+			}
+		];
 	};
 }

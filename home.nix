@@ -1,10 +1,10 @@
-{ inputs, osConfig, ... }:
+{ inputs, ... }:
 {
 	imports = [
 		(inputs.import-tree ./modules/home)
 		inputs.flatpak.homeManagerModules.nix-flatpak
 		inputs.steam-config.homeModules.default
-	] ++ osConfig.home-modules;
+	];
 
 	home.username = "themarlstar";
 	home.homeDirectory = "/home/themarlstar";
