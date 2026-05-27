@@ -30,17 +30,22 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-		eh = {
-			url = "github:notashelf/eh";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-
 		disko = {
 			url = "github:nix-community/disko";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		eh = {
+			url = "github:notashelf/eh";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		flatpak.url = "github:gmodena/nix-flatpak";
+
+		handy = {
+			url = "github:cjpais/Handy";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
 
 		lunar-client ={
 			url = "github:clonidine/lunar-client-flake";
