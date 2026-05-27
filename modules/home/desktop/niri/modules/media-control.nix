@@ -7,7 +7,7 @@
 		};
 
 		default-player = "YoutubeMusic";
-		playerctl-flags = ["-p=${default-player}"];
+		playerctl-flags = ["-p ${default-player}"];
 		playerctl = "playerctl ${builtins.concatStringsSep " " playerctl-flags}";
 		in {
 			# Win+PageUp
