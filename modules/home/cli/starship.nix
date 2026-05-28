@@ -106,6 +106,9 @@
 				format = "[$symbol$branch]($style) ";
 				symbol = " ";
 			};
+			hostname = {
+				ssh_symbol = " ";
+			};
 			java = {
 				format = "[$symbol($version)]($style) ";
 				symbol = " ";
