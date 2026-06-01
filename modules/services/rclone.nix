@@ -9,7 +9,7 @@ lib.concatMapAttrs (mountPath: mountCfg: {
 		Install.WantedBy = lib.mkForce [];
 	};
 }) remote.mounts
-) config.programs.rclone.remotes;
+) config.hm.programs.rclone.remotes;
 in home {
 	programs.rclone.enable = true;
 	systemd.user.services = rcloneMountOverrides;
