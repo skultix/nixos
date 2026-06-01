@@ -1,4 +1,4 @@
-{ home, config, ... }: home {
+{ home, config, ... }: (home {
 	programs.rclone.remotes.proton-drive = {
 		mounts."" = {
 			enable = true;
@@ -19,11 +19,11 @@
 			type = "protondrive";
 		};
 	};
-
+}) // {
 	age.secrets = let
 	mkSecrets = secrets: builtins.listToAttrs (map (secret: {
 		name = "cloud/proton-drive/${secret}";
-		value = { file = ../../../../secrets/cloud/proton-drive/${secret}.age; };
+		value = { file = ../../../secrets/cloud/proton-drive/${secret}.age; };
 	}) secrets);
 	in mkSecrets [
 		"username"

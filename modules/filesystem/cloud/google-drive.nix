@@ -1,4 +1,4 @@
-{ home, config, ... }: home {
+{ home, config, ... }: (home {
 	programs.rclone.remotes.google-drive = {
 		mounts."" = {
 			enable = true;
@@ -18,10 +18,10 @@
 			team_drive = "";
 		};
 	};
-
+}) // {
 	age.secrets = {
-		"cloud/google-drive/client_id".file = ../../../../secrets/cloud/google-drive/client_id.age;
-		"cloud/google-drive/client_secret".file = ../../../../secrets/cloud/google-drive/client_secret.age;
-		"cloud/google-drive/token".file = ../../../../secrets/cloud/google-drive/token.age;
+		"cloud/google-drive/client_id".file = ../../../secrets/cloud/google-drive/client_id.age;
+		"cloud/google-drive/client_secret".file = ../../../secrets/cloud/google-drive/client_secret.age;
+		"cloud/google-drive/token".file = ../../../secrets/cloud/google-drive/token.age;
 	};
 }
