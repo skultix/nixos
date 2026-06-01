@@ -1,4 +1,4 @@
-{ ... }: {
+{ home, ... }: home {
 	services.udiskie = {
 		enable = true;
 		settings = {

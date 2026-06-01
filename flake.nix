@@ -115,6 +115,7 @@
 				(inputs.import-tree ./modules/games)
 				(inputs.import-tree ./modules/lang)
 				(inputs.import-tree ./modules/security)
+				(inputs.import-tree ./modules/services)
 				(inputs.import-tree ./modules/nixos)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)
 				inputs.agenix.nixosModules.default

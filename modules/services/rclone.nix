@@ -1,5 +1,4 @@
-{ config, lib, ... }:
-let
+{ home, config, lib, ... }: let
 replaceIllegalChars = builtins.replaceStrings [ "/" " " "$" ] [ "." "_" "" ];
 
 rcloneMountOverrides = lib.concatMapAttrs (remoteName: remote:
@@ -11,8 +10,7 @@ lib.concatMapAttrs (mountPath: mountCfg: {
 	};
 }) remote.mounts
 ) config.programs.rclone.remotes;
-in
-{
+inhome {
 	programs.rclone.enable = true;
 	systemd.user.services = rcloneMountOverrides;
 }

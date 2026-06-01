@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ home, pkgs, ... }: home {
 	services.wl-clip-persist = {
 		enable = true;
 	};
