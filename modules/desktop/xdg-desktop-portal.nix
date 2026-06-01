@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ home, pkgs, lib, ... }: home {
 	xdg.portal = {
 		enable = true;
 		xdgOpenUsePortal = true;

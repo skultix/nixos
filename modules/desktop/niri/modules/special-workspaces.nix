@@ -1,4 +1,4 @@
-{ ... }: {
+{ home, ... }: home {
 	programs.niri.settings = {
 		workspaces = {
 			"01" = { name = "browser"; };

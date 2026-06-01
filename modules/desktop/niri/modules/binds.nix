@@ -1,8 +1,8 @@
-{ config, lib, ... }: let
+{ home, config, lib, ... }: let
 program = config.cfg.programs;
 bind = b: action: to: { ${b}.action.${action} = to; };
 bind-sh = b: to: bind b "spawn-sh" to;
-in {
+inhome {
 	programs.niri.settings.binds = lib.mergeAttrsList [
 		# Workspace navigation
 		(bind "Mod+1" "focus-workspace" 1)

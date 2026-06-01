@@ -1,11 +1,11 @@
-{ ... }: let
+{ home, ... }: let
 ease-out-expo = duration: {
 	easing.curve = "ease-out-expo";
 	easing.duration-ms = duration;
 };
 
 window-open-close-anim-duration = 1000;
-in {
+inhome {
 	programs.niri.settings.animations = {
 		window-open = {
 			enable = true;

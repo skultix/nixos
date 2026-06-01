@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: {
+{ home, inputs, pkgs, ... }: home {
 	cfg.programs = let
 	ipc = action: "noctalia-shell ipc call ${action}";
 	in {
