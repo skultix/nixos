@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ home, pkgs, ... }: home {
 	home.packages = with pkgs; [ typst ]
 	++ (with pkgs.typstPackages; [
 		wordometer

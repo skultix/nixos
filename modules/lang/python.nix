@@ -1,4 +1,4 @@
-{ osConfig, lib, ... }: {
+{ home, osConfig, lib, ... }: home {
 	# home.packages = with pkgs.python314Packages; [
 	# 	pkgs.python314
 	#
