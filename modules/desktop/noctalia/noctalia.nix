@@ -1,4 +1,4 @@
-{ home, inputs, pkgs, ... }: home {
+{ home, inputs, pkgs, ... }: {
 	cfg.programs = let
 	ipc = action: "noctalia-shell ipc call ${action}";
 	in {
@@ -13,7 +13,7 @@
 			hide = ipc "bar hide";
 		};
 	};
-
+} // home {
 	imports = [
 		inputs.noctalia.homeModules.default
 	];

@@ -1,4 +1,9 @@
-{ home, pkgs, ... }: home {
+{ home, pkgs, ... }: {
+	cfg.programs = {
+		launcher = "vicinae toggle";
+		clipboard-manager = "vicinae deeplink vicinae://launch/clipboard/history";
+	};
+} // home {
 	programs.vicinae = {
 		enable = true;
 		systemd.enable = true;
@@ -20,11 +25,6 @@
 				"core:refresh-apps"
 			];
 		};
-	};
-
-	cfg.programs = {
-		launcher = "vicinae toggle";
-		clipboard-manager = "vicinae deeplink vicinae://launch/clipboard/history";
 	};
 
 	home.packages = [

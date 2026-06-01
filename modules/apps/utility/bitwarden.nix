@@ -1,6 +1,6 @@
-{ home, pkgs, ... }: home {
+{ home, pkgs, ... }: {
 	cfg.programs.password-manager = "bitwarden";
-
+} // home {
 	home.packages = with pkgs; [
 		bitwarden-desktop
 		bitwarden-cli

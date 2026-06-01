@@ -1,6 +1,6 @@
-{ home, pkgs, config, ... }: home {
+{ home, pkgs, config, ... }: {
 	cfg.programs.power-menu = "wleave";
-
+} // home {
 	programs.wleave = {
 		enable = true;
 		settings = {
