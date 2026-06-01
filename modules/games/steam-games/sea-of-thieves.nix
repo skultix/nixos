@@ -1,4 +1,4 @@
-{ lib, pkgs, ... }: {
+{ home, lib, pkgs, ... }: home {
 	programs.steam.config.apps.sea-of-thieves = {
 		id = 1172620;
 		launchOptions.wrappers = [

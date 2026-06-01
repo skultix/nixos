@@ -112,6 +112,7 @@
 				(inputs.import-tree ./modules/cli)
 				(inputs.import-tree ./modules/desktop)
 				(inputs.import-tree ./modules/filesystem)
+				(inputs.import-tree ./modules/games)
 				(inputs.import-tree ./modules/nixos)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)
 				inputs.agenix.nixosModules.default

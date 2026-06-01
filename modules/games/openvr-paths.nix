@@ -1,8 +1,8 @@
-{ config, osConfig, lib, pkgs, ... }: let
+{ home, config, osConfig, lib, pkgs, ... }: let
 gamecfg = osConfig.cfg.games;
 vrcfg = gamecfg.vr;
 steam = "${config.xdg.dataHome}/Steam";
-in lib.mkIf vrcfg.enable {
+in lib.mkIf vrcfg.enablehome {
 	xdg.configFile."openvr/openvrpaths.vrpath".text = (builtins.toJSON {
 		version = 1;
 		jsonid = "vrpathreg";
