@@ -107,17 +107,7 @@
 				(nixpkgs.lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "themarlstar" ])
 
 				./modules/unfree.nix
-				(inputs.import-tree ./modules/apps)
-				(inputs.import-tree ./modules/appearance)
-				(inputs.import-tree ./modules/cli)
-				(inputs.import-tree ./modules/desktop)
-				(inputs.import-tree ./modules/filesystem)
-				(inputs.import-tree ./modules/games)
-				(inputs.import-tree ./modules/lang)
-				(inputs.import-tree ./modules/security)
-				(inputs.import-tree ./modules/services)
-				(inputs.import-tree ./modules/utility)
-				(inputs.import-tree ./modules/nixos)
+				(inputs.import-tree ./modules)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)
 				inputs.agenix.nixosModules.default
 				inputs.eh.nixosModules.default

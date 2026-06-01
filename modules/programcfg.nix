@@ -1,7 +1,7 @@
-{ lib, ... }: let
+{ home, lib, ... }: let
 str = "str";
 opt = type: lib.mkOption { type = lib.types.${type}; };
-in {
+inhome {
 	options.cfg.programs = {
 		terminal = opt str;
 		launcher = opt str;
