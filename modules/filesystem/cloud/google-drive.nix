@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ home, config, ... }: home {
 	programs.rclone.remotes.google-drive = {
 		mounts."" = {
 			enable = true;

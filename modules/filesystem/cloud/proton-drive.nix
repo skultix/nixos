@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ home, config, ... }: home {
 	programs.rclone.remotes.proton-drive = {
 		mounts."" = {
 			enable = true;
