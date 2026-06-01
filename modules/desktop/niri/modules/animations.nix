@@ -5,7 +5,7 @@ ease-out-expo = duration: {
 };
 
 window-open-close-anim-duration = 1000;
-inhome {
+in home {
 	programs.niri.settings.animations = {
 		window-open = {
 			enable = true;

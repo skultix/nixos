@@ -10,7 +10,7 @@ lib.concatMapAttrs (mountPath: mountCfg: {
 	};
 }) remote.mounts
 ) config.programs.rclone.remotes;
-inhome {
+in home {
 	programs.rclone.enable = true;
 	systemd.user.services = rcloneMountOverrides;
 }

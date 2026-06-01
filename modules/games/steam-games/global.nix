@@ -1,6 +1,6 @@
 { home, pkgs, ... }: let
 proton-ge-version = pkgs.proton-ge-bin.version;
-inhome {
+in home {
 	programs.steam.config = {
 		enable = true;
 		closeSteam = true;

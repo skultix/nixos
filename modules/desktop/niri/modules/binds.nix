@@ -2,7 +2,7 @@
 program = config.cfg.programs;
 bind = b: action: to: { ${b}.action.${action} = to; };
 bind-sh = b: to: bind b "spawn-sh" to;
-inhome {
+in home {
 	programs.niri.settings.binds = lib.mergeAttrsList [
 		# Workspace navigation
 		(bind "Mod+1" "focus-workspace" 1)
