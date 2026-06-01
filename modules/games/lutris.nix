@@ -1,6 +1,6 @@
 { home, pkgs, lib, config, ... }: let
 gamecfg = config.cfg.games;
-in lib.mkIf gamecfg.lutris.enable home {
+in lib.mkIf gamecfg.lutris.enable (home {
 	programs.lutris = {
 		enable = true;
 		package = lib.warn "lutris openldap temporarily overridden"
@@ -31,4 +31,4 @@ in lib.mkIf gamecfg.lutris.enable home {
 		# protonPackages = with pkgs; [ proton-ge-bin ];
 		# defaultWinePackage = pkgs.proton-ge-bin;
 	};
-}
+})
