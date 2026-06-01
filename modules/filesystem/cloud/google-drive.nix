@@ -3,7 +3,6 @@
 		mounts."" = {
 			enable = true;
 			autoMount = true;
-			# mountPoint = "${osConfig.cfg.users.main.home}/cloud/google-drive";
 			mountPoint = "/home/themarlstar/cloud/google-drive";
 		};
 		secrets = let

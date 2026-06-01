@@ -1,5 +1,5 @@
-{ home, pkgs, lib, osConfig, ... }: let
-gamecfg = osConfig.cfg.games;
+{ home, pkgs, lib, config, ... }: let
+gamecfg = config.cfg.games;
 in lib.mkIf gamecfg.lutris.enable home {
 	programs.lutris = {
 		enable = true;
@@ -27,7 +27,7 @@ in lib.mkIf gamecfg.lutris.enable home {
 			gamemode
 			umu-launcher
 		];
-		steamPackage = osConfig.programs.steam.package;
+		steamPackage = config.programs.steam.package;
 		# protonPackages = with pkgs; [ proton-ge-bin ];
 		# defaultWinePackage = pkgs.proton-ge-bin;
 	};

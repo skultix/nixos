@@ -1,4 +1,4 @@
-{ home, osConfig, lib, ... }: home {
+{ home, config, lib, ... }: home {
 	# home.packages = with pkgs.python314Packages; [
 	# 	pkgs.python314
 	#
@@ -11,5 +11,5 @@
 
 	programs.fish.shellAbbrs.urm = "uv run main.py";
 
-	home.sessionPath = lib.mkIf (!osConfig.environment.localBinInPath) ["$HOME/.local/bin"];
+	home.sessionPath = lib.mkIf (!config.environment.localBinInPath) ["$HOME/.local/bin"];
 }
