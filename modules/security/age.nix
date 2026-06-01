@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ home, inputs, ... }: home {
 	imports = [
 		inputs.agenix.homeManagerModules.default
 	];
