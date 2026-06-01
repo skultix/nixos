@@ -1,6 +1,6 @@
 { home, pkgs, lib, osConfig, ... }: let
 gamecfg = osConfig.cfg.games;
-in lib.mkIf gamecfg.lutris.enablehome {
+in lib.mkIf gamecfg.lutris.enable home {
 	programs.lutris = {
 		enable = true;
 		package = lib.warn "lutris openldap temporarily overridden"

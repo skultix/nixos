@@ -2,7 +2,7 @@
 gamecfg = osConfig.cfg.games;
 vrcfg = gamecfg.vr;
 steam = "${config.xdg.dataHome}/Steam";
-in lib.mkIf vrcfg.enablehome {
+in lib.mkIf vrcfg.enable home {
 	xdg.configFile."openvr/openvrpaths.vrpath".text = (builtins.toJSON {
 		version = 1;
 		jsonid = "vrpathreg";
