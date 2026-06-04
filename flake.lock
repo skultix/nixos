@@ -234,11 +234,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1778940504,
-        "narHash": "sha256-icE/A507esXXgvNN0KjrqlWNupu9dx61J0qV9sU645E=",
+        "lastModified": 1779984401,
+        "narHash": "sha256-NmHQCjNHSP52KP2bfSb0bQ4Ej8kFqLOmTOX47ukKjGE=",
         "owner": "notashelf",
         "repo": "eh",
-        "rev": "add693289faa2291b04c1168befcb772ebf734b6",
+        "rev": "b0f0ea0c45c0fdf00441374c94f9d5aa0fd1aeb0",
         "type": "github"
       },
       "original": {
@@ -250,11 +250,11 @@
     "firefox-gnome-theme": {
       "flake": false,
       "locked": {
-        "lastModified": 1776136500,
-        "narHash": "sha256-r0gN2brVWA351zwMV0Flmlcd6SGMvYqFbvC3DfKFM8Y=",
+        "lastModified": 1779670703,
+        "narHash": "sha256-UdfMivNMwCCqQsYDg5pSz8X2IOaOrIZLIIy+Bg3CO2o=",
         "owner": "rafaelmardojai",
         "repo": "firefox-gnome-theme",
-        "rev": "0f8ba203d475587f477e7ae12661bd8459e225b7",
+        "rev": "942159e73e40bf785816f7f1f5feed9ef3d7c8f9",
         "type": "github"
       },
       "original": {
@@ -362,11 +362,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1775087534,
-        "narHash": "sha256-91qqW8lhL7TLwgQWijoGBbiD4t7/q75KTi8NxjVmSmA=",
+        "lastModified": 1778716662,
+        "narHash": "sha256-m1Yf0wZ8j1OHjTc2UwHwyQRSnNeSgLJOd7q5Y45hzi4=",
         "owner": "hercules-ci",
         "repo": "flake-parts",
-        "rev": "3107b77cd68437b9a76194f0f7f9c55f2329ca5b",
+        "rev": "f7c1a2d347e4c52d5fb8d10cb4d94b5884e546fb",
         "type": "github"
       },
       "original": {
@@ -512,6 +512,43 @@
       "original": {
         "owner": "vic",
         "repo": "import-tree",
+        "type": "github"
+      }
+    },
+    "livesplit-one": {
+      "inputs": {
+        "livesplit-one-druid": "livesplit-one-druid",
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1780498924,
+        "narHash": "sha256-oQzTtK5hCXmyqFN4T4xaFgfFiNmkoobvP8RQPX665BQ=",
+        "owner": "Marlstar",
+        "repo": "livesplit-one-flake",
+        "rev": "8af4a9a10c17a37c7581ec31dbae1a4962b06baa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Marlstar",
+        "repo": "livesplit-one-flake",
+        "type": "github"
+      }
+    },
+    "livesplit-one-druid": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777845010,
+        "narHash": "sha256-LCPy+dz/I2LDLjj+Alv2lIB01sdVBqW6kzj9VFm+N8M=",
+        "owner": "AlexKnauth",
+        "repo": "livesplit-one-druid",
+        "rev": "ae7edb1aec87a2bd15066bc64fe69064eafaf8bf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "AlexKnauth",
+        "repo": "livesplit-one-druid",
         "type": "github"
       }
     },
@@ -890,6 +927,7 @@
         "handy": "handy",
         "home-manager": "home-manager_2",
         "import-tree": "import-tree_2",
+        "livesplit-one": "livesplit-one",
         "lunar-client": "lunar-client",
         "millennium": "millennium",
         "niri": "niri",

@@ -47,6 +47,11 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		livesplit-one = {
+			url = "github:Marlstar/livesplit-one-flake";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		lunar-client ={
 			url = "github:clonidine/lunar-client-flake";
 		};
