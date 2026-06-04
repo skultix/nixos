@@ -523,11 +523,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1780498924,
-        "narHash": "sha256-oQzTtK5hCXmyqFN4T4xaFgfFiNmkoobvP8RQPX665BQ=",
+        "lastModified": 1780551517,
+        "narHash": "sha256-blcFJlrjYJTeaJJzl52NtdB3JDZ8wXyjTjLzLAwvh+E=",
         "owner": "Marlstar",
         "repo": "livesplit-one-flake",
-        "rev": "8af4a9a10c17a37c7581ec31dbae1a4962b06baa",
+        "rev": "56b82d9c1f3f3baf31b3fbfe9cc0a7b58ead3a7e",
         "type": "github"
       },
       "original": {
