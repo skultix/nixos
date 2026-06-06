@@ -21,7 +21,7 @@
 		};
 
 		claude-switch = {
-			url = "github:Marlstar/claude-switch-fish";
+			url = "github:skultix/claude-switch-fish";
 			flake = false;
 		};
 
@@ -48,7 +48,7 @@
 		};
 
 		livesplit-one = {
-			url = "github:Marlstar/livesplit-one-flake";
+			url = "github:skultix/livesplit-one-flake";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
