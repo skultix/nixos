@@ -1,5 +1,6 @@
 { home, ... }: home {
 	programs.fish.shellAbbrs = {
-		nrs = "sudo nixos-rebuild switch --flake ~/nixos#(hostname)";
+		# nrs = "sudo nixos-rebuild switch --flake ~/nixos#(hostname)";
+		nrs = "nh os switch";
 	};
 }
