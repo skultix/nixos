@@ -23,7 +23,10 @@
 	age.secrets = let
 	mkSecrets = secrets: builtins.listToAttrs (map (secret: {
 		name = "cloud/proton-drive/${secret}";
-		value = { file = ../../../secrets/cloud/proton-drive/${secret}.age; };
+		value = {
+			file = ../../../secrets/cloud/proton-drive/${secret}.age;
+			owner = "themarlstar";
+		};
 	}) secrets);
 	in mkSecrets [
 		"username"

@@ -20,8 +20,17 @@
 	};
 }) // {
 	age.secrets = {
-		"cloud/google-drive/client_id".file = ../../../secrets/cloud/google-drive/client_id.age;
-		"cloud/google-drive/client_secret".file = ../../../secrets/cloud/google-drive/client_secret.age;
-		"cloud/google-drive/token".file = ../../../secrets/cloud/google-drive/token.age;
+		"cloud/google-drive/client_id" = {
+			file = ../../../secrets/cloud/google-drive/client_id.age;
+			owner = "themarlstar";
+		};
+		"cloud/google-drive/client_secret" = {
+			file = ../../../secrets/cloud/google-drive/client_secret.age;
+			owner = "themarlstar";
+		};
+		"cloud/google-drive/token" = {
+			file = ../../../secrets/cloud/google-drive/token.age;
+			owner = "themarlstar";
+		};
 	};
 }
