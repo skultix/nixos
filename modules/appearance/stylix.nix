@@ -12,5 +12,9 @@
 		fonts.sizes = {
 			terminal = 14;
 		};
+
+		# Stylix's kmscon target uses removed options (services.kmscon.extraConfig/fonts).
+		# We don't use kmscon, so just disable the target.
+		targets.kmscon.enable = false;
 	};
 }
