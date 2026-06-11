@@ -32,9 +32,18 @@
 		];
 
 		hm.programs.niri.settings.window-rules = [
-			{
+			{ # Non-fullscreen
 				matches = [ { app-id = "steam"; title = "Steam"; } ];
 				open-fullscreen = false;
+			}
+			{ # Notifications - open in corner non-focused
+				matches = [{ app-id = "steam"; title = "^notificationtoasts_\d+_desktop$"; }];
+				open-focused = false;
+				default-floating-position = {
+					x = 10;
+					y = 10;
+					relative-to = "bottom-right";
+				};
 			}
 		];
 	};
