@@ -574,11 +574,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1778471543,
-        "narHash": "sha256-//d3XsSTVtzRh7LJ8/W8RTWg+HtwDeHG6gf5s/8cBeg=",
+        "lastModified": 1780892413,
+        "narHash": "sha256-jscwADEujMJ69jHmgjOcxXhV5UWQeDZFRHL7CM19z2o=",
         "owner": "clonidine",
         "repo": "lunar-client-flake",
-        "rev": "7db39408e0bf329044b53cb9e1b79d568c16cdfc",
+        "rev": "f95808dbc13721aeb0ecec1dd4c63bd1984f5fee",
         "type": "github"
       },
       "original": {
