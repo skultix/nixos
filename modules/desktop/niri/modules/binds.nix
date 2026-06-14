@@ -20,8 +20,8 @@ in home {
 
 		# Window navigation
 		(bind "Mod+H" "focus-column-left" {})
-		(bind "Mod+J" "focus-window-down" {})
-		(bind "Mod+K" "focus-window-up" {})
+		(bind "Mod+J" "focus-window-or-workspace-down" {})
+		(bind "Mod+K" "focus-window-or-workspace-up" {})
 		(bind "Mod+L" "focus-column-right" {})
 		(bind "Mod+Home" "focus-column-first" {})
 		(bind "Mod+End" "focus-column-last" {})
@@ -29,8 +29,8 @@ in home {
 		(bind "Mod+D" "focus-workspace-down" {})
 		# Window control | movement
 		(bind "Mod+Shift+H" "move-column-left" {})
-		(bind "Mod+Shift+J" "move-window-down" {})
-		(bind "Mod+Shift+K" "move-window-up" {})
+		(bind "Mod+Shift+J" "move-window-down-or-to-workspace-down" {})
+		(bind "Mod+Shift+K" "move-window-up-or-to-workspace-up" {})
 		(bind "Mod+Shift+L" "move-column-right" {})
 		# Window control | workspaces
 		(bind "Mod+Shift+1" "move-column-to-workspace" 1)
