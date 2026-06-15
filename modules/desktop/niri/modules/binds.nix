@@ -77,7 +77,8 @@ in home {
 		(bind-sh "Mod+B" program.password-manager)
 		(bind-sh "Mod+C" program.clipboard-manager)
 		(bind-sh "Mod+Shift+Escape" program.system-monitor)
-		(bind-sh "Mod+Control+L" program.lock)
+		{ "Mod+Control+L" = { action.spawn-sh = program.lock; allow-when-locked = true; }; }
+		# (bind-sh "Mod+Control+L" program.lock)
 		(bind-sh "Mod+S" program.bar.peek)
 		(bind-sh "Mod+N" program.notifications.toggle)
 		(bind-sh "Mod+Shift+N" program.notifications.clear)
