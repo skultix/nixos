@@ -79,6 +79,8 @@ in home {
 		(bind-sh "Mod+Shift+Escape" program.system-monitor)
 		(bind-sh "Mod+Control+L" program.lock)
 		(bind-sh "Mod+S" program.bar.peek)
+		(bind-sh "Mod+N" program.notifications.toggle)
+		(bind-sh "Mod+Shift+N" program.notifications.clear)
 
 		# Screenshot
 		(bind "Mod+Shift+S" "screenshot" {})
