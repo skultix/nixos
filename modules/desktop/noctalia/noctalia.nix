@@ -1,16 +1,17 @@
 { home, inputs, pkgs, ... }: {
 	cfg.programs = let
-	ipc = action: "noctalia-shell ipc call ${action}";
+	ipc = action: "noctalia msg ${action}";
+	peek-time = 2;
 	in {
-		lock = ipc "lockScreen lock";
+		lock = ipc "session lock";
 		notifications = {
-			toggle = ipc "notifications toggleHistory";
-			clear = ipc "notifications clear";
+			toggle = ipc "panel-toggle control-center notifications";
+			clear = ipc "notification-clear-history";
 		};
 		bar = {
-			peek = ipc "bar peek";
-			show = ipc "bar show";
-			hide = ipc "bar hide";
+			show = ipc "bar-show";
+			hide = ipc "bar-hide";
+			peek = "${ipc "bar-show"} && sleep ${builtins.toString peek-time} && ${ipc "bar-hide"}";
 		};
 	};
 } // home {
@@ -18,37 +19,13 @@
 		inputs.noctalia.homeModules.default
 	];
 
-	programs.noctalia-shell = {
+	home.packages = with pkgs; [
+		ddcutil
+	];
+
+	programs.noctalia = {
 		enable = true;
-		settings = builtins.fromJSON (builtins.readFile ./settings.json);
-		plugins = {
-			sources = [
-				{
-					name = "Official Noctalia Plugins";
-					url = "https://github.com/noctalia-dev/noctalia-plugins";
-					enabled = true;
-				}
-			];
-
-			states = {
-				network-manager-vpn = {
-					enabled = true;
-					sourceUrl = "https://github.com/noctalia-dev/noctalia-plugins";
-				};
-			};
-		};
-	};
-
-	systemd.user.services.noctalia = {
-		Unit = {
-			Description = "noctalia shell";
-		};
-		Install.WantedBy = ["graphical-session.target"];
-		Service = {
-			Type = "simple";
-			ExecStart = "${inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default}/bin/noctalia-shell";
-			Restart = "on-failure";
-			After = "graphical-session.target";
-		};
+		systemd.enable = true;
+		settings = builtins.fromTOML (builtins.readFile ./noctalia.toml);
 	};
 }

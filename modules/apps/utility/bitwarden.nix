@@ -1,5 +1,9 @@
-{ home, pkgs, ... }: {
+{ home, pkgs, lib, ... }: {
 	cfg.programs.password-manager = "bitwarden";
+
+	nixpkgs.config.permittedInsecurePackages = lib.warn "bitwarden using EOL electron" [
+		"electron-39.8.10"
+	];
 } // home {
 	home.packages = with pkgs; [
 		bitwarden-desktop
