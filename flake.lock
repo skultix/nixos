@@ -1139,15 +1139,15 @@
         ]
       },
       "locked": {
-        "lastModified": 1779835652,
-        "narHash": "sha256-HqFeMHlPCDZrjZPpRuFVFNjcy3HJX77QP3aGYoWMVx0=",
-        "owner": "marlstar",
+        "lastModified": 1782706395,
+        "narHash": "sha256-rwiVxD7nY6tIA531Txn8x5zDbaCbWah3dDDQlierLkI=",
+        "owner": "skultix",
         "repo": "vercel-cli-flake",
-        "rev": "9963b998d530b8d079da0f94bcec88911c08f401",
+        "rev": "666b361c59b4e4f6caea48be1b6a6c673a70ed9e",
         "type": "github"
       },
       "original": {
-        "owner": "marlstar",
+        "owner": "skultix",
         "repo": "vercel-cli-flake",
         "type": "github"
       }
