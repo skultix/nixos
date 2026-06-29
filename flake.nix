@@ -112,7 +112,6 @@
 				{ identities.${name} = import ./hosts/${name}/identity.nix; }
 				(nixpkgs.lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "themarlstar" ])
 
-				./modules/unfree.nix
 				(inputs.import-tree ./modules)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)
 				inputs.agenix.nixosModules.default
