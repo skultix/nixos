@@ -1,0 +1,3 @@
+{
+	ssh-pubkey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIObrpAJDZ9pEX5APzCxe7+V1vurKtUe1Pwe0WXOVTXPk";
+}

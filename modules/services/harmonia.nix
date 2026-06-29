@@ -22,8 +22,7 @@
 		"http://skultik.local:5000" # Local network
 		"http://skultik:5000" # Tailscale MagicDNS
 	];
-	non-self-caches = builtins.attrValues
-	(builtins.removeAttrs all-caches [ config.networking.hostName ]);
+	non-self-caches = builtins.filter (item: builtins.match ".*${config.networking.hostName}.*" item == null) all-caches;
 	in {
 		trusted-substituters = non-self-caches;
 		trusted-public-keys = [

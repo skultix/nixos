@@ -109,6 +109,7 @@
 			modules = [
 				./hosts/${name}/configuration.nix
 				{ networking.hostName = name; }
+				{ identities.${name} = import ./hosts/${name}/identity.nix; }
 				(nixpkgs.lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "themarlstar" ])
 
 				./modules/unfree.nix
