@@ -18,6 +18,9 @@ in
 	"wg/wg-home.age".publicKeys = defaults;
 	"wg/protonvpn-brisbane.age".publicKeys = defaults;
 
+	# <== Harmonia ==>
+	"harmonia/private-key.age".publicKeys = defaults;
+
 	# <== Cloud storage ==>
 	# Google Drive
 	"cloud/google-drive/client_id.age".publicKeys = defaults;
