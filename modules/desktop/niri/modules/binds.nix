@@ -25,8 +25,6 @@ in home {
 		(bind "Mod+L" "focus-column-right" {})
 		(bind "Mod+Home" "focus-column-first" {})
 		(bind "Mod+End" "focus-column-last" {})
-		(bind "Mod+U" "focus-workspace-up" {})
-		(bind "Mod+D" "focus-workspace-down" {})
 		# Window control | movement
 		(bind "Mod+Shift+H" "move-column-left" {})
 		(bind "Mod+Shift+J" "move-window-down-or-to-workspace-down" {})
@@ -42,8 +40,6 @@ in home {
 		(bind "Mod+Shift+7" "move-column-to-workspace" 7)
 		(bind "Mod+Shift+8" "move-column-to-workspace" 8)
 		(bind "Mod+Shift+9" "move-column-to-workspace" 9)
-		(bind "Mod+Shift+U" "move-column-to-workspace-up" {})
-		(bind "Mod+Shift+D" "move-column-to-workspace-down" {})
 		# Window control | columns
 		(bind "Mod+BracketLeft" "consume-or-expel-window-left" {})
 		(bind "Mod+BracketRight" "consume-or-expel-window-right" {})
