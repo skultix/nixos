@@ -25,6 +25,8 @@
 
 			quick-terminal-position = "center";
 			quick-terminal-size = "500px,500px";
+
+			quit-after-last-window-closed = false;
 		};
 	};
 }
