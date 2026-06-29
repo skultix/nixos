@@ -93,7 +93,7 @@
 		};
 
 		vercel-cli = {
-			url = "github:marlstar/vercel-cli-flake";
+			url = "github:skultix/vercel-cli-flake";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
