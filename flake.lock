@@ -29,11 +29,11 @@
         "rust-overlay": "rust-overlay"
       },
       "locked": {
-        "lastModified": 1782793757,
-        "narHash": "sha256-gTLKDZ7koSLXxx9kT4CqZKJX+0iyXzMMkTUEXJyYxq8=",
+        "lastModified": 1782798908,
+        "narHash": "sha256-8ek/xuK7khpToDkDFKBa81PHFKldaxBnPKnIpR3en90=",
         "owner": "skultix",
         "repo": "aspid",
-        "rev": "b215889289ee3c960819add2520ffbb40a105a06",
+        "rev": "62fbfe6aa04ed51d3a1871cdaff0a3f433e962ca",
         "type": "github"
       },
       "original": {
