@@ -21,6 +21,9 @@ in
 	# <== Harmonia ==>
 	"harmonia/private-key.age".publicKeys = defaults;
 
+	# <== Remote Builds ==>
+	"remote-build/private-key.age".publicKeys = defaults;
+
 	# <== Cloud storage ==>
 	# Google Drive
 	"cloud/google-drive/client_id.age".publicKeys = defaults;
