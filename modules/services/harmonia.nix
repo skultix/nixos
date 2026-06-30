@@ -26,14 +26,12 @@
 	in {
 		trusted-substituters = non-self-caches;
 		trusted-public-keys = [
-			"My Machines:QTk6YdrJBlLueYowgkUaJJHJoySQ32DuyOs41oy74lc="
+			"MyMachines:jZlsbbjuVisaqjVQ/9snYoX0dHzA/4NCXFTMg5/uQgk="
 		];
 	};
 
 	age.secrets."harmonia/private-key" = {
 		file = ../../secrets/harmonia/private-key.age;
-		owner = "harmonia";
-		group = "harmonia";
 		mode = "0400";
 	};
 }
