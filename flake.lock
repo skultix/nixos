@@ -21,6 +21,27 @@
         "type": "github"
       }
     },
+    "aspid": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "rust-overlay": "rust-overlay"
+      },
+      "locked": {
+        "lastModified": 1782793757,
+        "narHash": "sha256-gTLKDZ7koSLXxx9kT4CqZKJX+0iyXzMMkTUEXJyYxq8=",
+        "owner": "skultix",
+        "repo": "aspid",
+        "rev": "b215889289ee3c960819add2520ffbb40a105a06",
+        "type": "github"
+      },
+      "original": {
+        "owner": "skultix",
+        "repo": "aspid",
+        "type": "github"
+      }
+    },
     "base16": {
       "inputs": {
         "fromYaml": "fromYaml"
@@ -876,6 +897,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
+        "aspid": "aspid",
         "cachyos-kernel": "cachyos-kernel",
         "claude-desktop": "claude-desktop",
         "claude-switch": "claude-switch",
@@ -897,6 +919,27 @@
         "stylix": "stylix",
         "tinted-schemes": "tinted-schemes_2",
         "vercel-cli": "vercel-cli"
+      }
+    },
+    "rust-overlay": {
+      "inputs": {
+        "nixpkgs": [
+          "aspid",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1782789458,
+        "narHash": "sha256-CR55gKCChD9ffN1Ag5az20Z3RD4tylHlcM1SSohkMA8=",
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "rev": "067959ef838c440558ca519cf08ca87f43c3db3a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "oxalica",
+        "repo": "rust-overlay",
+        "type": "github"
       }
     },
     "stable": {
