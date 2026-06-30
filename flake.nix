@@ -15,6 +15,11 @@
 			inputs.darwin.follows = ""; # no need for apple stuff on nixos
 		};
 
+		aspid = {
+			url = "github:skultix/aspid";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		cachyos-kernel = {
 			url = "github:xddxdd/nix-cachyos-kernel/release";
 			# do not override nixpkgs
