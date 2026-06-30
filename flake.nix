@@ -106,6 +106,15 @@
 	};
 
 	outputs = { self, nixpkgs, stable, ... }@inputs: let
+		identitiesModule = { identities = builtins.listToAttrs (
+			builtins.map (
+				sys: {
+					name = sys;
+					value = import ./hosts/${sys}/identity.nix;
+				}
+			) hostnames
+		); };
+
 		mkSystem = name: nixpkgs.lib.nixosSystem {
 			specialArgs = {
 				inherit inputs;
@@ -114,7 +123,7 @@
 			modules = [
 				./hosts/${name}/configuration.nix
 				{ networking.hostName = name; }
-				{ identities.${name} = import ./hosts/${name}/identity.nix; }
+				identitiesModule
 				(nixpkgs.lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "themarlstar" ])
 
 				(inputs.import-tree ./modules)
@@ -128,8 +137,18 @@
 				inputs.niri.nixosModules.niri
 			];
 		};
+
+		systems = builtins.listToAttrs (
+			builtins.map (
+				hostname: {
+					name = hostname;
+					value = mkSystem hostname;
+				}
+			) hostnames
+		);
+
+		hostnames = [ "skultik" "skultikpc" ];
 	in {
-		nixosConfigurations.skultikpc = mkSystem "skultikpc";
-		nixosConfigurations.skultik = mkSystem "skultik";
+		nixosConfigurations = systems;
 	};
 }
