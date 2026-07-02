@@ -1,9 +1,9 @@
-{ lib, config, ... }: {
+{ lib, config, ... }: let
+default-nameservers = [ "8.8.8.8" "4.4.4.4" ];
+in {
 	options = {
 		cfg.networking.dns.nameservers = lib.mkOption {
-			default = [
-				"8.8.8.8" "8.8.4.4" # Google DNS
-			];
+			default = default-nameservers;
 		};
 	};
 	config = let
