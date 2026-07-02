@@ -27,6 +27,7 @@
 			extraGroups = usercfg.core-groups ++ usercfg.groups;
 			home = "/home/${usercfg.username}";
 			shell = usercfg.shell;
+			uid = 1000;
 		};
 
 		home-manager = {
