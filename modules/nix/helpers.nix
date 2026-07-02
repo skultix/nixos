@@ -1,4 +1,6 @@
 { config, ... }: {
+	programs.eh.enable = true;
+
 	programs.nh = {
 		enable = true;
 		clean = {
