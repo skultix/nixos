@@ -13,6 +13,7 @@
 			hide = ipc "bar-hide";
 			peek = "${ipc "bar-show"} && sleep ${builtins.toString peek-time} && ${ipc "bar-hide"}";
 		};
+		power-menu = ipc "open session";
 	};
 } // home {
 	imports = [
