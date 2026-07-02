@@ -20,7 +20,10 @@ in {
 	cfg = config.cfg.filesystems.home-nas;
 	base = cfg.mounts-base;
 
-	in lib.mkIf cfg.enable {
+	in {
+		age.secrets."nas/creds".file = ../../../../secrets/nas/creds.age;
+	}
+	// lib.mkIf cfg.enable {
 		fileSystems = let
 		creds = config.age.secrets."nas/creds".path;
 		mkNasShare = share: {
@@ -52,7 +55,5 @@ in {
 			value = mkNasShare s.share;
 		}) shares
 		);
-
-		age.secrets."nas/creds".file = ../../../../secrets/nas/creds.age;
 	};
 }
