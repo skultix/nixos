@@ -43,6 +43,12 @@
 			deno = {
 				format = "[$symbol($version)]($style) ";
 			};
+			directory = {
+				before_repo_root_style = "black";
+				read_only = " ";
+				truncation_length = 3;
+				truncation_symbol = ".../";
+			};
 			docker_context = {
 				format = "[$symbol$context]($style) ";
 				symbol = " ";
