@@ -6,7 +6,13 @@
 		extraGroups = [ "wheel" ];
 	};
 
-	home-manager.extraSpecialArgs = {
-		inherit inputs;
+	home-manager = {
+		users.themarlstar = {
+			home = {
+				username = "themarlstar";
+				homeDirectory = "/home/themarlstar";
+			};
+		} // import ../../home.nix;
+		extraSpecialArgs = { inherit inputs; };
 	};
 }
