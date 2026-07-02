@@ -12,7 +12,8 @@
 				username = "themarlstar";
 				homeDirectory = "/home/themarlstar";
 			};
-		} // import ../../home.nix;
+			imports = [ ../../home.nix ];
+		};
 		extraSpecialArgs = { inherit inputs; };
 	};
 }
