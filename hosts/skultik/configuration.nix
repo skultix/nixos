@@ -8,8 +8,6 @@
 			intel-graphics.enable = true;
 		};
 
-		users.main.enable = true;
-
 		filesystems = {
 			home-nas.enable = true;
 		};

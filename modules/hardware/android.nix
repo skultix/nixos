@@ -3,5 +3,5 @@
 		android-tools
 	];
 
-	cfg.users.main.groups = [ "adbusers" ];
+	users.users.themarlstar.extraGroups = [ "adbusers" ];
 }

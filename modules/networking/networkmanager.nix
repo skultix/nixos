@@ -6,5 +6,5 @@
 		];
 	};
 
-	cfg.users.main.groups = [ "networkmanager" ];
+	users.users.themarlstar.extraGroups = [ "networkmanager" ];
 }

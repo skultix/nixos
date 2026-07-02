@@ -1,5 +1,10 @@
 { ... }: {
 	services.libinput.enable = true;
+
+	# uinput
 	hardware.uinput.enable = true;
-	users.groups.uinput = {};
+	users = {
+		users.users.themarlstar.extraGroups = [ "input" "uinput" ];
+		groups.uinput = {};
+	};
 }
