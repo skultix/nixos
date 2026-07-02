@@ -13,6 +13,9 @@
 			init = {
 				defaultBranch = "main";
 			};
+			branch = {
+				autoSetupMerge = true;
+			};
 			push = {
 				autoSetupRemote = true;
 			};
