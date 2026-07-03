@@ -39,6 +39,5 @@
 
 	powerManagement.cpuFreqGovernor = "performance";
 
-	# DO NOT CHANGE THIS, LIKE, EVER!!!
-	system.stateVersion = "25.11";
+	system.stateVersion = "26.05";
 }

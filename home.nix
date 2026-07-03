@@ -4,7 +4,7 @@
 		inputs.steam-config.homeModules.default
 	];
 
-	home.stateVersion = "25.11"; # Don't change
+	home.stateVersion = "26.05";
 
 	home.sessionVariables = {
 		EDITOR = "nvim";
