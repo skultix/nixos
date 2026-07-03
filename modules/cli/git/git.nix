@@ -1,4 +1,11 @@
-{ home, pkgs, ... }: home {
+{ home, pkgs, ... }: {
+	# enable system-wide because nixos needs it
+	programs.git = {
+		enable = true;
+		package = pkgs.gitFull;
+	};
+}
+// home {
 	programs.git = {
 		enable = true;
 		package = pkgs.gitFull;
