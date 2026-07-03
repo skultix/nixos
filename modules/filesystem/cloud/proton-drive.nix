@@ -3,7 +3,7 @@
 		mounts."" = {
 			enable = true;
 			autoMount = true;
-			mountPoint = "/home/themarlstar/cloud/proton-drive";
+			mountPoint = "/home/skultix/cloud/proton-drive";
 		};
 		secrets = let
 		secret = name: config.age.secrets."cloud/proton-drive/${name}".path;
@@ -25,7 +25,7 @@
 		name = "cloud/proton-drive/${secret}";
 		value = {
 			file = ../../../secrets/cloud/proton-drive/${secret}.age;
-			owner = "themarlstar";
+			owner = "skultix";
 		};
 	}) secrets);
 	in mkSecrets [

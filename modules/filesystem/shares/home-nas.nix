@@ -40,7 +40,7 @@ in {
 					"noauto" # don't mount at boot
 					"nofail" # don't fail hard
 					# so I own the files and dirs
-					"uid=${toString config.users.users.themarlstar.uid}"
+					"uid=${toString config.users.users.skultix.uid}"
 					"gid=${toString config.users.groups.users.gid}"
 					# rwxr-xr-x
 					"file_mode=0755"

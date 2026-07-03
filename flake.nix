@@ -124,7 +124,7 @@
 				./hosts/${name}/configuration.nix
 				{ networking.hostName = name; }
 				identitiesModule
-				(nixpkgs.lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "themarlstar" ])
+				(nixpkgs.lib.mkAliasOptionModule [ "hm" ] [ "home-manager" "users" "skultix" ])
 
 				(inputs.import-tree ./modules)
 				(inputs.import-tree.match "\\(?!secrets\.nix\\)" ./secrets)

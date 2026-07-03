@@ -175,7 +175,7 @@ widget_order = [
     type = "sticker"
 
         [lockscreen_widgets.widget.lockscreen-widget-0000000000000006.settings]
-        image_path = "/home/themarlstar/cloud/google-drive/pfp/grimm.jpg"
+        image_path = "/home/skultix/cloud/google-drive/pfp/grimm.jpg"
         opacity = 1.0
 
 [nightlight]
@@ -193,7 +193,7 @@ position = "top_right"
 	media = false
 
 [shell]
-avatar_path = "/home/themarlstar/cloud/google-drive/pfp/grimm.jpg"
+avatar_path = "/home/skultix/cloud/google-drive/pfp/grimm.jpg"
 password_style = "random"
 screen_time_enabled = true
 telemetry_enabled = false
@@ -227,22 +227,22 @@ source = "builtin"
 wallpaper_scheme = "m3-content"
 
 [wallpaper]
-directory = "/home/themarlstar/wallpapers"
+directory = "/home/skultix/wallpapers"
 enabled = true
 fill_mode = "crop"
 transition_duration = 1000
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/themarlstar/wallpapers/firewatch.jpeg"
+    path = "/home/skultix/wallpapers/firewatch.jpeg"
 
     [wallpaper.last]
-    path = "/home/themarlstar/wallpapers/firewatch.jpeg"
+    path = "/home/skultix/wallpapers/firewatch.jpeg"
 
     [[wallpaper.favorite]]
     builtin_palette = "Catppuccin"
     palette_source = "builtin"
-    path = "/home/themarlstar/wallpapers/firewatch.jpeg"
+    path = "/home/skultix/wallpapers/firewatch.jpeg"
     theme_mode = "dark"
 
 [weather]

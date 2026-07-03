@@ -3,5 +3,5 @@
 		android-tools
 	];
 
-	users.users.themarlstar.extraGroups = [ "adbusers" ];
+	users.users.skultix.extraGroups = [ "adbusers" ];
 }
