@@ -1,7 +1,7 @@
 { home, inputs, pkgs, ... }: let
 identityPaths = [
 	"/etc/ssh/ssh_host_ed25519_key"
-	"/home/themarlstar/.ssh/agenix"
+	"/home/skultix/.ssh/agenix"
 ];
 in {
 	environment.systemPackages = [

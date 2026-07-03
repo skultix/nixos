@@ -1,16 +1,16 @@
 { inputs, ... }: {
-	users.users.themarlstar = {
+	users.users.skultix = {
 		isNormalUser = true;
 		uid = 1000;
-		home = "/home/themarlstar";
+		home = "/home/skultix";
 		extraGroups = [ "wheel" ];
 	};
 
 	home-manager = {
-		users.themarlstar = {
+		users.skultix = {
 			home = {
-				username = "themarlstar";
-				homeDirectory = "/home/themarlstar";
+				username = "skultix";
+				homeDirectory = "/home/skultix";
 			};
 			imports = [ ../../home.nix ];
 		};

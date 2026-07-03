@@ -4,7 +4,7 @@
 	# uinput
 	hardware.uinput.enable = true;
 	users = {
-		users.themarlstar.extraGroups = [ "input" "uinput" ];
+		users.skultix.extraGroups = [ "input" "uinput" ];
 		groups.uinput = {};
 	};
 }

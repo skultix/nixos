@@ -6,5 +6,5 @@
 		];
 	};
 
-	users.users.themarlstar.extraGroups = [ "networkmanager" ];
+	users.users.skultix.extraGroups = [ "networkmanager" ];
 }

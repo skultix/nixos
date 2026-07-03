@@ -3,7 +3,7 @@
 		enable = true;
 	};
 
-	users.users.themarlstar.openssh.authorizedKeys.keys = builtins.map
+	users.users.skultix.openssh.authorizedKeys.keys = builtins.map
 	(identity: identity.ssh-pubkey)
 	(builtins.attrValues config.identities);
 }

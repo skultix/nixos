@@ -5,7 +5,7 @@
 		enable = true;
 		settings = {
 			# -l ~/.config/wlogout/layout -C ~/.config/wleave/style.css
-			# $powermenu = wleave --buttons-per-row 6 --margin-top 500 --margin-bottom 500 --layout /home/themarlstar/.config/wleave/layout --css /home/themarlstar/.config/wleave/style.css
+			# $powermenu = wleave --buttons-per-row 6 --margin-top 500 --margin-bottom 500 --layout /home/skultix/.config/wleave/layout --css /home/skultix/.config/wleave/style.css
 
 			buttons-per-row = "1/2";
 			close-on-lost-focus = true;

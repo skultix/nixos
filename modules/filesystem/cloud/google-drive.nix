@@ -3,7 +3,7 @@
 		mounts."" = {
 			enable = true;
 			autoMount = true;
-			mountPoint = "/home/themarlstar/cloud/google-drive";
+			mountPoint = "/home/skultix/cloud/google-drive";
 		};
 		secrets = let
 		secret = name: config.age.secrets."cloud/google-drive/${name}".path;
@@ -22,15 +22,15 @@
 	age.secrets = {
 		"cloud/google-drive/client_id" = {
 			file = ../../../secrets/cloud/google-drive/client_id.age;
-			owner = "themarlstar";
+			owner = "skultix";
 		};
 		"cloud/google-drive/client_secret" = {
 			file = ../../../secrets/cloud/google-drive/client_secret.age;
-			owner = "themarlstar";
+			owner = "skultix";
 		};
 		"cloud/google-drive/token" = {
 			file = ../../../secrets/cloud/google-drive/token.age;
-			owner = "themarlstar";
+			owner = "skultix";
 		};
 	};
 }
