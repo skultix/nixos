@@ -35,7 +35,7 @@ in lib.mkMerge [
 		'';
 
 		age.secrets."remote-build/private-key" = {
-			file = ../../secrets/remote-build/private-key.age;
+			file = ../../../secrets/remote-build/private-key.age;
 			path = "/root/.ssh/nix-builder";
 			owner = "root";
 			group = "root";

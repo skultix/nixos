@@ -27,5 +27,5 @@
 		};
 	};
 
-	age.secrets."wg/protonvpn-brisbane".file = ../../../../secrets/wg/protonvpn-brisbane.age;
+	age.secrets."wg/protonvpn-brisbane".file = ../../../secrets/wg/protonvpn-brisbane.age;
 }

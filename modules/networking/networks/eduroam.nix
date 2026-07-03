@@ -35,5 +35,5 @@
 		};
 	};
 
-	age.secrets."wifi/eduroam".file = ../../../../secrets/wifi/eduroam.age;
+	age.secrets."wifi/eduroam".file = ../../../secrets/wifi/eduroam.age;
 }

@@ -19,7 +19,7 @@ in {
 	config = let
 	cfg = config.cfg.filesystems.home-nas;
 	in lib.mkMerge [
-		{ age.secrets."nas/creds".file = ../../../../secrets/nas/creds.age; }
+		{ age.secrets."nas/creds".file = ../../../secrets/nas/creds.age; }
 
 		(lib.mkIf cfg.enable {
 			fileSystems = let

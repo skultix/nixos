@@ -35,5 +35,5 @@
 		};
 	};
 
-	age.secrets."wifi/uq".file = ../../../../secrets/wifi/uq.age;
+	age.secrets."wifi/uq".file = ../../../secrets/wifi/uq.age;
 }
