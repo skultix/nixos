@@ -8,7 +8,6 @@
 
 	home.sessionVariables = {
 		EDITOR = "nvim";
-		MANPAGER = "nvim +Man!";
 	};
 
 	# Let Home Manager install and manage itself.

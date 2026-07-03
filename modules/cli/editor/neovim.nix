@@ -3,4 +3,6 @@
 		neovim
 		vim
 	];
+
+	environment.variables.MANPAGER = "nvim +Man!";
 }
