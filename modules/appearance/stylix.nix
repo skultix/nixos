@@ -1,4 +1,4 @@
-{ inputs, pkgs, ... }: {
+{ home, inputs, pkgs, lib, config, ... }: {
 	stylix = {
 		enable = true;
 		polarity = "dark";
@@ -16,5 +16,10 @@
 		# Stylix's kmscon target uses removed options (services.kmscon.extraConfig/fonts).
 		# We don't use kmscon, so just disable the target.
 		targets.kmscon.enable = false;
+	};
+}
+// home {
+	stylix = {
+		targets.firefox.profileNames = [ "typst-preview" ];
 	};
 }
