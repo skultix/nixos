@@ -36,14 +36,8 @@
 		performanceGovernor = kernelcfg.usePerformanceGovernor;
 	};
 	kernel = pkgs.cachyosKernels.${kernel-pkg}.override kernel-overrides;
-	# Build against the cachyos kernel flake's nixpkgs to hopefully cut
-	# down on unnecessary kernel rebuilds from my own nixpkgs updates
-	pinnedPkgs = import inputs.cachyos-kernel.inputs.nixpkgs {
-		inherit (pkgs.stdenv.hostPlatform) system;
-		config.allowUnfree = true; # nvidia
-	};
 	in {
-		boot.kernelPackages = pinnedPkgs.linuxKernel.packagesFor kernel;
+		boot.kernelPackages = pkgs.linuxKernel.packagesFor kernel;
 		# boot.kernelPackages = pkgs.linuxPackages_zen;
 		boot.kernelModules = [ "uinput" ];
 		boot.kernelParams = [
