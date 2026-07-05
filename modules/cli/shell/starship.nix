@@ -46,8 +46,7 @@
 			directory = {
 				before_repo_root_style = "black";
 				read_only = " ";
-				truncation_length = 3;
-				truncation_symbol = ".../";
+				truncation_length = 5;
 			};
 			docker_context = {
 				format = "[$symbol$context]($style) ";
