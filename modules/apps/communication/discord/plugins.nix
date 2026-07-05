@@ -1,4 +1,5 @@
 { home, ... }: home {
+	# to get an ok version of a json config:
 	# ~/.config/Equicord/settings/settings.json => https://4evy.github.io/nixcord/#sec-converter
 
 	programs.nixcord.config.plugins = {
@@ -154,7 +155,7 @@
 		};
 		pinIcon.enable = true;
 		profileSets = {
-			avatarSize = 40;
+			avatarSize = 40.0;
 		};
 		questify = {
 			enable = true;
@@ -182,7 +183,7 @@
 		serverListIndicators.enable = true;
 		shikiCodeblocks = {
 			enable = true;
-			theme = "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/2d87559c7601a928b9f7e0f0dda243d2fb6d4499/packages/tm-themes/themes/tokyo-night.json";
+			theme = "https://raw.githubusercontent.com/shikijs/textmate-grammars-themes/bc5436518111d87ea58eb56d97b3f9bec30e6b83/packages/tm-themes/themes/tokyo-night.json";
 			useDevIcon = "COLOR";
 		};
 		showAllMessageButtons.enable = true;
