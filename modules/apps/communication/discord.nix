@@ -1,16 +1,30 @@
-{ home, pkgs, ... }: home {
-	programs.discord = {
-		enable = true;
-		settings = {
-			SKIP_HOST_UPDATE = true;
-			DANGEROUS_ENABLE_DEVTOOLS_ONLY_ENABLE_IF_YOU_KNOW_WHAT_YOURE_DOING = true;
-		};
-		package = (pkgs.discord.override {
-			withEquicord = true;
-			# withOpenASAR = true;
-			disableUpdates = false; # home-manager does this
-		});
-	};
+{ home, inputs, pkgs, ... }: home {
+	imports = [ inputs.nixcord.homeModules.nixcord ];
+	programs.discord.enable = true;
+	programs.discord.settings.SKIP_HOST_UPATE = true;
+	# programs.nixcord = {
+	# 	enable = true;
+	#
+	# 	discord = {
+	# 		# equicord.enable = true;
+	# 		openASAR.enable = false;
+	# 		krisp.enable = false;
+	# 		commandLineArgs = [
+	# 			# "--enable-features=VaapiVideoDecoder,MiddleClickAutoscroll"
+	# 		];
+	# 		settings = {
+	# 			SKIP_HOST_UPDATE = true;
+	# 		};
+	# 	};
+	#
+	# 	config = let
+	# 	system24 = "https://raw.githubusercontent.com/refact0r/system24/refs/heads/main/theme/system24.theme.css";
+	# 	in {
+	# 		enabledThemeLinks = [ system24 ];
+	#
+	# 		frameless = true;
+	# 	};
+	# };
 
 	xdg.autostart.entries = [
 		"${pkgs.discord}/share/applications/discord.desktop"
