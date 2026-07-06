@@ -728,11 +728,11 @@
         "nixpkgs-nixcord": "nixpkgs-nixcord"
       },
       "locked": {
-        "lastModified": 1783215923,
-        "narHash": "sha256-G7OsvYw3TIMAutgoDsx/qLwazNsnVHT7bTGb2cpS3wY=",
+        "lastModified": 1783244166,
+        "narHash": "sha256-otl/59UNHmvTOs6NoLNaUtsXG9HNWOKTuk9fakIKOxY=",
         "owner": "4evy",
         "repo": "nixcord",
-        "rev": "96a46640afff7c66518177ec381d01500ff41872",
+        "rev": "26269ccc562c062d4c8bf842dda325e3a08b9e5f",
         "type": "github"
       },
       "original": {
