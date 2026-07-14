@@ -253,6 +253,10 @@ unit = "celsius"
 [widget.active_window]
 title_scroll = "on_hover"
 
+[widget.bluetooth]
+hide_when_no_connected_device = true
+show_label = true
+
 [widget.control-center]
 glyph = "layout-2-filled"
 
