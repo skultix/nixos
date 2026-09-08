@@ -15,6 +15,7 @@
 
 		hardware = {
 			monitors.DP-6 = { width = 3440; height = 1440; };
+			fan-control.enable = true;
 			nvidia.enable = true;
 			stream-deck.enable = true;
 		};
