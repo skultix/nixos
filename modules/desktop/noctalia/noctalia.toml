@@ -1,3 +1,6 @@
+[accessibility]
+ui_scale = 1.0
+
 [bar]
 order = [ "main" ]
 
@@ -197,7 +200,6 @@ avatar_path = "/home/skultix/cloud/google-drive/pfp/grimm.jpg"
 password_style = "random"
 screen_time_enabled = true
 telemetry_enabled = false
-ui_scale = 1.0
 
     [[shell.session.actions]]
     action = "lock"
@@ -270,4 +272,4 @@ type = "spacer"
 stat = "gpu_usage"
 
 [widget.workspaces]
-display = "none"
+show_labels = false
