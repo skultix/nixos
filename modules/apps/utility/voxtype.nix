@@ -23,6 +23,6 @@
 	];
 
 	programs.niri.settings.binds = {
-		"Mod+Comma".action.spawn-sh = "handy --toggle-transcription";
+		"Mod+Comma".action.spawn-sh = "voxtype record toggle";
 	};
 }
