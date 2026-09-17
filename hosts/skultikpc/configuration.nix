@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{ inputs, config, ... }: {
 	imports = [
 		./hardware-configuration.nix
 		inputs.disko.nixosModules.default
@@ -15,9 +15,17 @@
 
 		hardware = {
 			monitors.DP-6 = { width = 3440; height = 1440; };
-			fan-control.enable = true;
 			nvidia.enable = true;
 			stream-deck.enable = true;
+			fan-control = {
+				enable = true;
+				kernelModules = {
+					packages = [ config.boot.kernelPackages.nct6687d ];
+					modules = [ "nct6687" ];
+					# claims the same chip, but read-only
+					blacklist = [ "nct6683" ];
+				};
+			};
 		};
 
 		filesystems = {
