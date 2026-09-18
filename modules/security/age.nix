@@ -6,6 +6,9 @@ identityPaths = [
 masterIdentities = [
 	"/home/skultix/.ssh/agenix"
 ];
+backupKeys = [
+	"age10mkguxj35lec52xls4vraleq74mrfdl5sk2vu08t5gku8wtn9egsxftpva"
+];
 
 agenix-rekey-package = inputs.agenix-rekey.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in {
@@ -24,6 +27,7 @@ in {
 	age.rekey = {
 		hostPubkey = config.identities.this.ssh-pubkey;
 		masterIdentities = masterIdentities;
+		extraEncryptionPubkeys = backupKeys;
 		storageMode = "local";
 		localStorageDir = ../.. + "/secrets/rekeyed/${config.networking.hostName}";
 	};
