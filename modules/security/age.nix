@@ -4,7 +4,7 @@ identityPaths = [
 	"/home/skultix/.ssh/agenix"
 ];
 masterIdentities = [
-	"/home/skultix/.ssh/agenix.pub"
+	"/home/skultix/.ssh/agenix"
 ];
 
 agenix-rekey-package = inputs.agenix-rekey.packages.${pkgs.stdenv.hostPlatform.system}.default;
@@ -25,7 +25,7 @@ in {
 		hostPubkey = config.identities.this.ssh-pubkey;
 		masterIdentities = masterIdentities;
 		storageMode = "local";
-		localStorageDir = ../.. + "/secrets/rekeyed/${config.networking.hostname}";
+		localStorageDir = ../.. + "/secrets/rekeyed/${config.networking.hostName}";
 	};
 }
 // home {
