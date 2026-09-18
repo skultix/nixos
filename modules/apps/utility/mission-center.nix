@@ -6,10 +6,9 @@
 			window-selected-page = "apps-page";
 			performance-sliding-graphs = true;
 			performance-smooth-graphs = true;
+			apps-page-merged-process-stats = true; # idk why this isn't the default lol
 		};
-		locks = [
-			"/io/missioncenter/MissionCenter/window-selected-page"
-		];
+		lockAll = true;
 	}];
 } // home {
 	home.packages = with pkgs; [
