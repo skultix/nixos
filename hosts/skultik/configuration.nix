@@ -20,7 +20,7 @@
 			epic.enable = true;
 			minecraft = {
 				enable = true;
-				clients.lunar = true;
+				clients.lunar.enable = true;
 			};
 		};
 	};

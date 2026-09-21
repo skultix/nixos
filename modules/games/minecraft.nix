@@ -9,7 +9,8 @@ in {
 			};
 			
 			clients = {
-				lunar = lib.mkEnableOption "enable Lunar Client";
+				lunar.enable = lib.mkEnableOption "enable Lunar Client";
+				modrinth.enable = lib.mkOption { default = true; };
 			};
 
 			cubelify.enable = lib.mkOption {
@@ -46,7 +47,8 @@ in {
 		};
 
 		home.packages = with pkgs; []
-		++ lib.optional minecraft.clients.lunar lunar-client-package
+		++ lib.optional minecraft.clients.lunar.enable lunar-client-package
+		++ lib.optional minecraft.clients.modrinth.enable modrinth-app
 		++ lib.optional minecraft.cubelify.enable cubelify
 		;
 	});
