@@ -9,9 +9,6 @@
 	programs.git = {
 		enable = true;
 		package = pkgs.gitFull;
-		hooks = {
-			commit-msg = ./hooks/commit-msg; # conventional commits warning hook
-		};
 		settings = {
 			user = {
 				name = "Marley Reeves";
