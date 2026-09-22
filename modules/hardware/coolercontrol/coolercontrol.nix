@@ -29,6 +29,6 @@
 
 		environment.systemPackages = [ pkgs.lm_sensors ];
 
-		environment.etc."coolercontrol/config.toml" = lib.mkIf (builtins.pathExists cfg-path) { source = cfg-path; };
+		environment.etc."coolercontrol/config.toml" = lib.mkIf (builtins.pathExists cfg-path) { source = cfg-path; mode = "0644"; };
 	};
 }

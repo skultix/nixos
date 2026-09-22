@@ -14,6 +14,6 @@
 	};
 
 	home.packages = with pkgs; [
-		gcr
+		gcr_3
 	];
 }
