@@ -3,6 +3,11 @@
 		devenv
 	];
 
+	xdg.configFile."devenv/config.yaml".source = (pkgs.formats.yaml {}).generate "devenv config.yaml" {
+		shell.prompt_prefix = false;
+		tui.statusline.enabled = true;
+	};
+
 	programs.fish.interactiveShellInit = ''
 	devenv hook fish | source
 	'';
