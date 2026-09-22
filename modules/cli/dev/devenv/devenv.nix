@@ -4,6 +4,7 @@
 	];
 
 	xdg.configFile."devenv/config.yaml".source = (pkgs.formats.yaml {}).generate "devenv config.yaml" {
+		version = 1;
 		shell.prompt_prefix = false;
 		tui.statusline.enabled = true;
 	};
