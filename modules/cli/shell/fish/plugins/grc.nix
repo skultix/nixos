@@ -1,9 +1,25 @@
 { home, pkgs, ... }: home {
-	programs.fish.plugins = [
-		{ name = "grc"; src = pkgs.fishPlugins.grc.src; }
+	home.packages = with pkgs; [
+		rgrc
 	];
 
-	home.packages = with pkgs; [
-		grc
-	];
+	programs.fish = let
+	excludedAliases = builtins.concatStringsSep "," [ "env" "ls" ];
+	in {
+		interactiveShellInit = ''
+		rgrc --aliases --except ${excludedAliases} | source
+		'';
+
+		functions.env = {
+			wraps = "env";
+			description = "colourise env with rgrc for standalone env invocations only";
+			body = ''
+				if set -q argv[1]
+					command env $argv
+				else
+					rgrc env
+				end
+			'';
+		};
+	};
 }
