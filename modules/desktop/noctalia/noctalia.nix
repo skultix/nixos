@@ -1,4 +1,4 @@
-{ home, inputs, pkgs, ... }: {
+{ home, inputs, pkgs, config, lib, ... }: {
 	cfg.programs = let
 	ipc = action: "noctalia msg ${action}";
 	peek-time = 2;
@@ -27,7 +27,10 @@
 	programs.noctalia = {
 		enable = true;
 		systemd.enable = true;
-		settings = builtins.fromTOML (builtins.readFile ./noctalia.toml);
+		settings = lib.mkMerge [
+			(builtins.fromTOML (builtins.readFile ./noctalia.toml))
+			(lib.mkIf (config.networking.hostName == "skultikpc") (builtins.fromTOML (builtins.readFile ./lockscreen-skultikpc.toml)))
+		];
 	};
 
 	stylix.targets.noctalia.enable = false;
