@@ -29,12 +29,18 @@ in {
 		programs.prismlauncher = {
 			enable = true;
 			package = (pkgs.prismlauncher.override {
+				additionalLibs = with pkgs; [
+					wayland
+					libxkbcommon
+					libdecor
+				];
 				additionalPrograms = with pkgs; [ ffmpeg ];
 				jdks = with pkgs; [
 					graalvmPackages.graalvm-ce
 					zulu8
 					zulu17
 					zulu
+					zulu25
 				];
 			});
 		};
