@@ -27,5 +27,5 @@
 		};
 	};
 
-	age.secrets."wg/wg-home".file = ../../../secrets/wg/wg-home.age;
+	age.secrets."wg/wg-home".rekeyFile = ../../../secrets/wg/wg-home.age;
 }

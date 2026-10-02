@@ -11,8 +11,14 @@
 		};
 
 		agenix = {
-			url = "github:ryantm/agenix";
-			inputs.darwin.follows = ""; # no need for apple stuff on nixos
+			# url = "github:ryantm/agenix";
+			url = "github:yaxitech/ragenix";
+			inputs.agenix.inputs.darwin.follows = ""; # no need for apple stuff on nixos
+		};
+
+		agenix-rekey = {
+			url = "github:oddlama/agenix-rekey";
+			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
 		aspid = {
@@ -127,7 +133,6 @@
 
 				(inputs.import-tree ./modules)
 				(inputs.import-tree.match "\\(?!secrets\\.nix\\)" ./secrets)
-				inputs.agenix.nixosModules.default
 				inputs.eh.nixosModules.default
 				inputs.flatpak.nixosModules.nix-flatpak
 				inputs.home-manager.nixosModules.default
@@ -149,5 +154,9 @@
 		hostnames = [ "skultik" "skultikpc" ];
 	in {
 		nixosConfigurations = systems;
+		agenix-rekey = inputs.agenix-rekey.configure {
+			userFlake = self;
+			nixosConfigurations = self.nixosConfigurations;
+		};
 	};
 }
