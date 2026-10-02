@@ -20,6 +20,10 @@
 		inputs.noctalia.homeModules.default
 	];
 
+	# the flake module only disables "programs/noctalia.nix", but home-manager has
+	# since moved its own module into a directory, so disable that path as well
+	disabledModules = [ "programs/noctalia" ];
+
 	home.packages = with pkgs; [
 		ddcutil
 	];
