@@ -922,6 +922,8 @@
         "stable": "stable",
         "steam-config": "steam-config",
         "stylix": "stylix",
+        "sung": "sung",
+        "sung-src": "sung-src",
         "tinted-schemes": "tinted-schemes_2",
         "vercel-cli": "vercel-cli",
         "voxtype": "voxtype"
@@ -1016,6 +1018,45 @@
       "original": {
         "owner": "nix-community",
         "repo": "stylix",
+        "type": "github"
+      }
+    },
+    "sung": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "sung-src": [
+          "sung-src"
+        ]
+      },
+      "locked": {
+        "lastModified": 1790651002,
+        "narHash": "sha256-OGaAihPvMflbZYfEVDFcXUo2mXBi3j7oXuTQCGpcl2s=",
+        "owner": "skultix",
+        "repo": "sung-flake",
+        "rev": "362fe38f6077170b6db2819edbe2c65eaab86490",
+        "type": "github"
+      },
+      "original": {
+        "owner": "skultix",
+        "repo": "sung-flake",
+        "type": "github"
+      }
+    },
+    "sung-src": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1790460191,
+        "narHash": "sha256-BYSJnlM5kpJBNfBmgCNw1OuVu8j0mldakAkc+9H/x38=",
+        "owner": "yappologistic",
+        "repo": "Sung",
+        "rev": "4918f7610725cace300db557b1f636ec1b80e260",
+        "type": "github"
+      },
+      "original": {
+        "owner": "yappologistic",
+        "repo": "Sung",
         "type": "github"
       }
     },

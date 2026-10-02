@@ -95,6 +95,17 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		sung = {
+			url = "github:skultix/sung-flake";
+			inputs.nixpkgs.follows = "nixpkgs";
+			inputs.sung-src.follows = "sung-src";
+		};
+
+		sung-src = {
+			url = "github:yappologistic/Sung";
+			flake = false;
+		};
+
 		tinted-schemes = {
 			flake = false;
 			url = "github:tinted-theming/schemes";
