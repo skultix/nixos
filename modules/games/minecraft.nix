@@ -34,9 +34,9 @@ in {
 					wayland
 					libxkbcommon
 					libdecor
+					dbus
 				];
 				additionalPrograms = with pkgs; [ ffmpeg ];
-				additionalLibs = with pkgs; [ dbus ];
 				jdks = with pkgs; [
 					graalvmPackages.graalvm-ce
 					zulu8
