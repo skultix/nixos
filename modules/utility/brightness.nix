@@ -9,7 +9,7 @@
 		allow-when-locked = true;
 	};
 	in {
-		XF86MonBrightnessUp = brightness-bind "brightnessctl s +10%";
-		XF86MonBrightnessDown = brightness-bind "brightnessctl s -10%";
+		XF86MonBrightnessUp = brightness-bind "brightnessctl s 10%+";
+		XF86MonBrightnessDown = brightness-bind "brightnessctl s 10%-";
 	};
 }
