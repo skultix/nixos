@@ -35,6 +35,7 @@ in {
 					libxkbcommon
 					libdecor
 					dbus
+					gtk3
 				];
 				additionalPrograms = with pkgs; [ ffmpeg ];
 				jdks = with pkgs; [
@@ -52,5 +53,13 @@ in {
 		++ lib.optional minecraft.clients.modrinth.enable modrinth-app
 		++ lib.optional minecraft.cubelify.enable cubelify
 		;
+
+		programs.niri.settings.window-rules = [{
+			matches = [{
+				app-id = "[Mm]inecraft.*";
+				is-floating = true;
+			}];
+			opacity = 0.5;
+		}];
 	});
 }
