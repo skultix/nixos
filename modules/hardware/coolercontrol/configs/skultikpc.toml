@@ -169,7 +169,11 @@ drivetemp_suspend = false
 # [settings.4b9cd1bc5fb2921253e6b7dd5b1b011086ea529d915a86b3560c236084452807]
 # disabled = true
 
-# ==== Added: quiet fan curves ====
+# ==== Added: fan curves (new case) ====
+# nct6687 header map:
+#   fan2 "Pump Fan"      -> AIO radiator fans (daisy chained)
+#   fan3 "System Fan #1" -> case fans (daisy chained)
+#   fan8 "System Fan #6" -> rear exhaust
 
 [[functions]]
 uid = "f0000000-0000-0000-0000-000000000001"
@@ -183,29 +187,26 @@ only_downward = false
 
 [[profiles]]
 uid = "a0000000-0000-0000-0000-000000000001"
-name = "CPU Fan Curve"
+name = "AIO Fans"
 p_type = "Graph"
-speed_profile = [[50.0, 15], [65.0, 25], [75.0, 50], [85.0, 78], [92.0, 100]]
+speed_profile = [[45.0, 30], [60.0, 38], [70.0, 55], [80.0, 75], [88.0, 100]]
 temp_source = { temp_name = "temp1", device_uid = "78d975e6e52d8190209d0c129492415449a43d59c0fba59031c2cbd54cdf9e98" }
-function = "f0000000-0000-0000-0000-000000000001"
 function_uid = "f0000000-0000-0000-0000-000000000001"
 
 [[profiles]]
 uid = "a0000000-0000-0000-0000-000000000002"
 name = "Case (CPU member)"
 p_type = "Graph"
-speed_profile = [[50.0, 35], [65.0, 42], [75.0, 60], [85.0, 80], [92.0, 100]]
+speed_profile = [[45.0, 30], [60.0, 35], [72.0, 55], [85.0, 80], [92.0, 100]]
 temp_source = { temp_name = "temp1", device_uid = "78d975e6e52d8190209d0c129492415449a43d59c0fba59031c2cbd54cdf9e98" }
-function = "f0000000-0000-0000-0000-000000000001"
 function_uid = "f0000000-0000-0000-0000-000000000001"
 
 [[profiles]]
 uid = "a0000000-0000-0000-0000-000000000003"
 name = "Case (GPU member)"
 p_type = "Graph"
-speed_profile = [[50.0, 35], [65.0, 50], [75.0, 70], [82.0, 88], [88.0, 100]]
+speed_profile = [[45.0, 30], [60.0, 40], [70.0, 60], [78.0, 80], [85.0, 100]]
 temp_source = { temp_name = "GPU Temp", device_uid = "034c2fb184a101865710c8258650caaaeade161075207cedb2f14e4168d8e6d2" }
-function = "f0000000-0000-0000-0000-000000000001"
 function_uid = "f0000000-0000-0000-0000-000000000001"
 
 [[profiles]]
@@ -214,13 +215,13 @@ name = "Case Fans"
 p_type = "Mix"
 mix_function_type = "Max"
 member_profile_uids = ["a0000000-0000-0000-0000-000000000002", "a0000000-0000-0000-0000-000000000003"]
-function = "0"
+function_uid = "0"
 
 [[profiles]]
 uid = "a0000000-0000-0000-0000-000000000005"
 name = "Rear (CPU member)"
 p_type = "Graph"
-speed_profile = [[50.0, 30], [65.0, 36], [75.0, 55], [85.0, 78], [92.0, 100]]
+speed_profile = [[45.0, 30], [60.0, 35], [72.0, 55], [85.0, 80], [92.0, 100]]
 temp_source = { temp_name = "temp1", device_uid = "78d975e6e52d8190209d0c129492415449a43d59c0fba59031c2cbd54cdf9e98" }
 function_uid = "f0000000-0000-0000-0000-000000000001"
 
@@ -228,7 +229,7 @@ function_uid = "f0000000-0000-0000-0000-000000000001"
 uid = "a0000000-0000-0000-0000-000000000006"
 name = "Rear (GPU member)"
 p_type = "Graph"
-speed_profile = [[50.0, 30], [65.0, 45], [75.0, 65], [82.0, 85], [88.0, 100]]
+speed_profile = [[45.0, 28], [60.0, 38], [70.0, 55], [78.0, 75], [85.0, 100]]
 temp_source = { temp_name = "GPU Temp", device_uid = "034c2fb184a101865710c8258650caaaeade161075207cedb2f14e4168d8e6d2" }
 function_uid = "f0000000-0000-0000-0000-000000000001"
 
@@ -236,13 +237,11 @@ function_uid = "f0000000-0000-0000-0000-000000000001"
 uid = "a0000000-0000-0000-0000-000000000007"
 name = "Rear Fan"
 p_type = "Mix"
-function_uid = "0"
-member_profile_uids = ["a0000000-0000-0000-0000-000000000005", "a0000000-0000-0000-0000-000000000006"]
 mix_function_type = "Max"
+member_profile_uids = ["a0000000-0000-0000-0000-000000000005", "a0000000-0000-0000-0000-000000000006"]
+function_uid = "0"
 
 [device-settings.7bfee7e15e0af819a1c74ac2f088d69197bdae5f361d2af4da2960c931be3cc7]
-fan1 = { profile_uid = "a0000000-0000-0000-0000-000000000001" }
-fan4 = { profile_uid = "a0000000-0000-0000-0000-000000000004" }
-fan5 = { profile_uid = "a0000000-0000-0000-0000-000000000004" }
-fan6 = { profile_uid = "a0000000-0000-0000-0000-000000000004" }
-fan7 = { profile_uid = "a0000000-0000-0000-0000-000000000007" }
+fan2 = { profile_uid = "a0000000-0000-0000-0000-000000000001" }
+fan3 = { profile_uid = "a0000000-0000-0000-0000-000000000004" }
+fan8 = { profile_uid = "a0000000-0000-0000-0000-000000000007" }
