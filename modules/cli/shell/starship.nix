@@ -5,8 +5,20 @@
 			format = "$all$nix_shell$character";
 			add_newline = true;
 
-			aws = {
-				format = "[$symbol($profile)(\\($region\\))([$duration])]($style) ";
+			# built-in module can't be gated on a command, so swap it for a custom one
+			# that only shows when the aws cli is on PATH (i.e. inside a devenv)
+			aws.disabled = true;
+			custom.aws = {
+				description = "AWS profile/region when the aws cli is available";
+				when = "command -v aws";
+				shell = [ "sh" ];
+				command = ''
+					printf '%s' "''${AWS_PROFILE:-''${AWS_DEFAULT_PROFILE:-default}}"
+					r="''${AWS_REGION:-$AWS_DEFAULT_REGION}"
+					if [ -n "$r" ]; then printf '(%s)' "$r"; fi
+				'';
+				format = "[$symbol($output)]($style) ";
+				style = "bold yellow";
 				symbol = "  ";
 			};
 			bun = {
