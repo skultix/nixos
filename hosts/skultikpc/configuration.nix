@@ -17,6 +17,7 @@
 			monitors.DP-6 = { width = 3440; height = 1440; };
 			nvidia.enable = true;
 			stream-deck.enable = true;
+			rgb.enable = true;
 			fan-control = {
 				enable = true;
 				kernelModules = {
