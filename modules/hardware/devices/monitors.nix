@@ -10,6 +10,10 @@
 					type = lib.types.int;
 					description = "Monitor height (pixels)";
 				};
+				hz = lib.mkOption {
+					type = lib.types.int;
+					description = "Monitor refresh rate (hz)";
+				};
 			};
 		});
 		default = {};
