@@ -8,12 +8,17 @@
 		];
 		config = let
 		portals = attrs: lib.mapAttrs' (key: val: lib.nameValuePair "org.freedesktop.impl.portal.${key}" val) attrs;
+		defaults = portals {
+			# By far the best imo
+			FileChooser = "gnome";
+		};
 		in {
-			common = {
+			common = defaults // {
 				default = "gnome";
-			} // portals {
-				# By far the best imo
-				FileChooser = "gnome";
+			};
+
+			hyprland = defaults // {
+				default = [ "hyprland" "gtk" ];
 			};
 		};
 	};

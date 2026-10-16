@@ -35,6 +35,10 @@
 							"$DESKTOP_SESSION" = "niri";
 							shell = "niri msg action quit";
 						}
+						{
+							"$DESKTOP_SESSION" = "Hyprland";
+							shell = "uwsm stop";
+						}
 					];
 					text = "Logout";
 					keybind = "e";
