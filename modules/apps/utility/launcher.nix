@@ -24,6 +24,8 @@
 				"applications:discord"
 				"core:refresh-apps"
 			];
+
+			providers.applications.preferences.launchPrefix = "runapp --";
 		};
 	};
 
