@@ -12,6 +12,11 @@
 		package = null;
 		# keep main config in lua rather than nix
 		extraConfig = "require(\"root\")";
+
+		plugins = with pkgs.hyprlandPlugins; [
+			hyprtasking
+			hypr-dynamic-cursors
+		];
 	};
 
 	xdg.configFile."hypr/.luarc.json".text = builtins.toJSON {
