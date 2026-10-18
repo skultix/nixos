@@ -14,7 +14,7 @@
 		};
 
 		hardware = {
-			monitors.DP-6 = { width = 3440; height = 1440; hz = 240; };
+			monitors.DP-6 = { width = 3440; height = 1440; hz = 240; hdr = true; };
 			nvidia.enable = true;
 			stream-deck.enable = true;
 			rgb.enable = true;

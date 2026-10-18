@@ -14,6 +14,7 @@
 					type = lib.types.int;
 					description = "Monitor refresh rate (hz)";
 				};
+				hdr = lib.mkEnableOption "HDR support";
 			};
 		});
 		default = {};

@@ -4,6 +4,8 @@ opts = builtins.map (i: {
 	mode = let s = builtins.toString; in "${s i.value.width}x${s i.value.height}@${s i.value.hz}";
 	position = "0x0";
 	scale = 1;
+	cm = lib.mkIf i.value.hdr "hdr";
+	supports_hdr = i.value.hdr;
 }) (lib.attrsToList config.cfg.hardware.monitors);
 
 monitors = builtins.map (m: { _args = [ m ]; }) opts;
