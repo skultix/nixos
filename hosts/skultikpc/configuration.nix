@@ -10,7 +10,11 @@
 		kernel = {
 			processorOpt = "zen4";
 			hzTicks = 1000;
-			extraParams = ["amd_pstate=active"];
+			extraParams = [
+				"amd_pstate=active"
+				# MSI Optix monitor exposes a broken 22K "driver" disk (sdc) that spams I/O errors
+				"usb-storage.quirks=1462:3fa4:i"
+			];
 		};
 
 		hardware = {
