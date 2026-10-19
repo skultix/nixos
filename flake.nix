@@ -79,6 +79,11 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		opendeck = {
+			url = "github:skultix/opendeck-flake";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		paseo = {
 			url = "github:getpaseo/paseo";
 			inputs.nixpkgs.follows = "nixpkgs";

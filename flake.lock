@@ -1061,6 +1061,26 @@
         "type": "github"
       }
     },
+    "opendeck": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1792338587,
+        "narHash": "sha256-AhLy+bpzLrq0fcEFK2luddaxbfDuy0Zh5rkNwO4GTXg=",
+        "owner": "skultix",
+        "repo": "opendeck-flake",
+        "rev": "e58f7652879345b4770cc06f06277e7834f4cd76",
+        "type": "github"
+      },
+      "original": {
+        "owner": "skultix",
+        "repo": "opendeck-flake",
+        "type": "github"
+      }
+    },
     "paseo": {
       "inputs": {
         "nixpkgs": [
@@ -1124,6 +1144,7 @@
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_5",
         "noctalia": "noctalia",
+        "opendeck": "opendeck",
         "paseo": "paseo",
         "stable": "stable",
         "steam-config": "steam-config",

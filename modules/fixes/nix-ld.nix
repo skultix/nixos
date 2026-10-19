@@ -4,6 +4,7 @@
 		libraries = with pkgs; [
 			# <== My Stuff ==>
 			ncurses # needed for swift
+			pipewire # audio in a bunch of apps
 
 			# <== PREMADE LIST FROM NIXOS WIKI ==>
 			# # Without these it silently fails
