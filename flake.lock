@@ -1068,11 +1068,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1792338587,
-        "narHash": "sha256-AhLy+bpzLrq0fcEFK2luddaxbfDuy0Zh5rkNwO4GTXg=",
+        "lastModified": 1792370104,
+        "narHash": "sha256-OAKhmqBrmaTBV0SRrBhcbnL6FZjMex7N7L5rxcZqgII=",
         "owner": "skultix",
         "repo": "opendeck-flake",
-        "rev": "e58f7652879345b4770cc06f06277e7834f4cd76",
+        "rev": "58bf79346d7c6629022d2edef83ad5f99bcb184d",
         "type": "github"
       },
       "original": {
