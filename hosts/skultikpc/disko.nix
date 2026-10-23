@@ -85,5 +85,28 @@ in {
 				};
 			};
 		};
+
+		# CT1000MX500SSD1 | 1TB
+		disk.ssd2 = {
+			type = "disk";
+			device = "/dev/disk/by-id/ata-CT1000MX500SSD1_2421E8B2EE53";
+			content = {
+				type = "gpt";
+				partitions.main = {
+					priority = 1;
+					size = "100%";
+					content = {
+						type = "btrfs";
+						extraArgs = [ "-L" "EXTRA" ];
+						subvolumes = {
+							"@extra" = {
+								mountpoint = "/mnt/extra";
+								mountOptions = btrfs-mount-options;
+							};
+						};
+					};
+				};
+			};
+		};
 	};
 }
