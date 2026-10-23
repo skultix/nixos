@@ -15,5 +15,15 @@
 		};
 
 		services.xserver.videoDrivers = ["nvidia"];
+
+		# nvidia lets compositors keep a huge pool of freed buffers around,
+		# which makes VRAM usage balloon until scanout allocation fails
+		# https://yalter.github.io/niri/Nvidia.html
+		environment.etc."nvidia/nvidia-application-profiles-rc.d/50-limit-free-buffer-pool-in-wayland-compositors.json".text = builtins.toJSON {
+			rules = lib.map (c: {
+				pattern = { feature = "procname"; matches = c;};
+				profile = "Limit Free Buffer Pool On Wayland Compositors";
+			}) ["niri" "Hyprland"];
+		};
 	};
 }
