@@ -4,4 +4,6 @@
 	environment.systemPackages = with pkgs; [
 		usbutils
 	];
+
+	users.users.skultix.extraGroups = ["dialout"];
 }
