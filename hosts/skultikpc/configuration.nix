@@ -47,7 +47,7 @@
 			};
 			vr = {
 				enable = true;
-				sidequest.enable = true;
+				sidequest.enable = false;
 			};
 		};
 	};
