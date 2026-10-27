@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "vmd" "nvme" "usb_storage" "sd_mod" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "thunderbolt" "nvme" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
@@ -19,16 +19,26 @@
       options = [ "subvol=@" ];
     };
 
-  fileSystems."/home" =
-    { device = "/dev/disk/by-uuid/4fe2da6c-99bb-4b88-8136-7cc8bbbeffc5";
-      fsType = "btrfs";
-      options = [ "subvol=@home" ];
-    };
-
   fileSystems."/nix" =
     { device = "/dev/disk/by-uuid/4fe2da6c-99bb-4b88-8136-7cc8bbbeffc5";
       fsType = "btrfs";
       options = [ "subvol=@nix" ];
+    };
+
+  fileSystems."/mnt/nas/home" =
+    { device = "systemd-1";
+      fsType = "autofs";
+    };
+
+  fileSystems."/mnt/nas/public" =
+    { device = "systemd-1";
+      fsType = "autofs";
+    };
+
+  fileSystems."/home" =
+    { device = "/dev/disk/by-uuid/4fe2da6c-99bb-4b88-8136-7cc8bbbeffc5";
+      fsType = "btrfs";
+      options = [ "subvol=@home" ];
     };
 
   fileSystems."/boot" =
@@ -42,5 +52,6 @@
     ];
 
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
+  hardware.cpu.intel.npu.enable = true;
   hardware.cpu.intel.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
 }
