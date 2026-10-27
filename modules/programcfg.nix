@@ -10,6 +10,7 @@ in {
 		password-manager = opt str;
 		system-monitor = opt str;
 		lock = opt str;
+		relock = opt str;
 		power-menu = opt str;
 		clipboard-manager = opt str;
 		notifications = {
