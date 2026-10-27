@@ -54,5 +54,10 @@
 
 	powerManagement.cpuFreqGovernor = "performance";
 
+	# Onboard Realtek USB audio (unused) stalls snd-usb-audio probe for ~5.6s at boot
+	boot.extraModprobeConfig = ''
+		options snd_usb_audio vid=0x0db0 pid=0x422d enable=0
+	'';
+
 	system.stateVersion = "26.05";
 }
