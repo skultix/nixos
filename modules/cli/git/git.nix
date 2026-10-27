@@ -32,6 +32,10 @@
 			merge = {
 				conflictStyle = "zdiff3";
 			};
+			rebase = {
+				autoStash = true;
+				rerere = true;
+			};
 			url = {
 				"git@github.com:".insteadOf = "gh:";
 				"git@gitlab.com:".insteadOf = "glab:";
