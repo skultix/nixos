@@ -24,7 +24,7 @@
 	mkSecrets = secrets: builtins.listToAttrs (map (secret: {
 		name = "cloud/proton-drive/${secret}";
 		value = {
-			file = ../../../secrets/cloud/proton-drive/${secret}.age;
+			rekeyFile = ../../../secrets/cloud/proton-drive/${secret}.age;
 			owner = "skultix";
 		};
 	}) secrets);

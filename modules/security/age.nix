@@ -1,7 +1,6 @@
-{ home, inputs, pkgs, config, ... }: let
+{ inputs, pkgs, config, ... }: let
 identityPaths = [
 	"/etc/ssh/ssh_host_ed25519_key"
-	"/home/skultix/.ssh/agenix"
 ];
 masterIdentities = [
 	"/home/skultix/.ssh/agenix"
@@ -31,11 +30,4 @@ in {
 		storageMode = "local";
 		localStorageDir = ../.. + "/secrets/rekeyed/${config.networking.hostName}";
 	};
-}
-// home {
-	imports = [
-		inputs.agenix.homeManagerModules.default
-	];
-
-	age.identityPaths = identityPaths;
 }

@@ -21,15 +21,15 @@
 }) // {
 	age.secrets = {
 		"cloud/google-drive/client_id" = {
-			file = ../../../secrets/cloud/google-drive/client_id.age;
+			rekeyFile = ../../../secrets/cloud/google-drive/client_id.age;
 			owner = "skultix";
 		};
 		"cloud/google-drive/client_secret" = {
-			file = ../../../secrets/cloud/google-drive/client_secret.age;
+			rekeyFile = ../../../secrets/cloud/google-drive/client_secret.age;
 			owner = "skultix";
 		};
 		"cloud/google-drive/token" = {
-			file = ../../../secrets/cloud/google-drive/token.age;
+			rekeyFile = ../../../secrets/cloud/google-drive/token.age;
 			owner = "skultix";
 		};
 	};

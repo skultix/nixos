@@ -31,7 +31,7 @@
 	};
 
 	age.secrets."harmonia/private-key" = {
-		file = ../../secrets/harmonia/private-key.age;
+		rekeyFile = ../../secrets/harmonia/private-key.age;
 		mode = "0400";
 	};
 }
