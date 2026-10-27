@@ -82,7 +82,7 @@ apply_on_boot = true
 # Whether to enable the integration with liquidctl.
 # Disabling this will prevent any communication with liquidctl,
 # and all HWMon supported devices will be shown.
-liquidctl_integration = true
+liquidctl_integration = false
 
 # There are some devices that are supported both by liquidctl and hwmon drivers. Normally the
 # preference is to use liquidctl as it supports more features such as RGB control. There are
@@ -95,7 +95,7 @@ hide_duplicate_devices = true
 no_init = false
 
 # Startup Delay (seconds) is an integer value between 0 and 10
-startup_delay = 2
+startup_delay = 0
 
 # For ThinkPads, wheather to use the 'full-speed' option when settings the fan to 100%
 # This option drives the fan as fast as it can go, which might exceed hardware limits,
