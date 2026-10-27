@@ -106,15 +106,15 @@ transition_duration = 1000
 transition_on_startup = true
 
     [wallpaper.default]
-    path = "/home/skultix/wallpapers/firewatch.jpeg"
+    path = "/home/skultix/wallpapers/wallhaven-zylmoo.jpg"
 
     [wallpaper.last]
-    path = "/home/skultix/wallpapers/firewatch.jpeg"
+    path = "/home/skultix/wallpapers/wallhaven-zylmoo.jpg"
 
     [[wallpaper.favorite]]
     builtin_palette = "Catppuccin"
     palette_source = "builtin"
-    path = "/home/skultix/wallpapers/firewatch.jpeg"
+    path = "/home/skultix/wallpapers/wallhaven-zylmoo.jpg"
     theme_mode = "dark"
 
 [weather]
