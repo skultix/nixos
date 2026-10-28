@@ -16,6 +16,12 @@
 
 		services.xserver.videoDrivers = ["nvidia"];
 
+		environment.sessionVariables = {
+			LIBVA_DRIVER_NAME = "nvidia";
+			__GLX_VENDOR_LIBRARY_NAME = "nvidia";
+			NVD_BACKEND = "direct";
+		};
+
 		# nvidia lets compositors keep a huge pool of freed buffers around,
 		# which makes VRAM usage balloon until scanout allocation fails
 		# https://yalter.github.io/niri/Nvidia.html

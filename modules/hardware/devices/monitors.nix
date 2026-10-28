@@ -20,6 +20,10 @@
 					default = null;
 					description = "Monitor name suffix based on `niri msg outputs`";
 				};
+				hyprland-opts = lib.mkOption {
+					default = {};
+					description = "Extra options to pass to `hl.monitor`";
+				};
 			};
 		});
 		default = {};
