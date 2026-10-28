@@ -15,6 +15,11 @@
 					description = "Monitor refresh rate (hz)";
 				};
 				hdr = lib.mkEnableOption "HDR support";
+				niri-suffix = lib.mkOption {
+					type = lib.types.nullOr lib.types.str;
+					default = null;
+					description = "Monitor name suffix based on `niri msg outputs`";
+				};
 			};
 		});
 		default = {};

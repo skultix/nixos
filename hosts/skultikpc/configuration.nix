@@ -18,7 +18,7 @@
 		};
 
 		hardware = {
-			monitors.DP-6 = { width = 3440; height = 1440; hz = 240; hdr = true; };
+			monitors."Microstep MPG341CX OLED" = { width = 3440; height = 1440; hz = 240; hdr = true; niri-suffix = "Unknown"; };
 			nvidia.enable = true;
 			stream-deck.enable = true;
 			rgb.enable = true;
