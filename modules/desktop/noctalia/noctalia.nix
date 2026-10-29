@@ -38,7 +38,10 @@
 		systemd.enable = true;
 		settings = lib.mkMerge [
 			(builtins.fromTOML (builtins.readFile ./noctalia.toml))
-			(lib.mkIf (config.networking.hostName == "skultikpc") (builtins.fromTOML (builtins.readFile ./lockscreen-skultikpc.toml)))
+
+			# Per device lockscreens
+			(let path = ./lockscreen-${config.networking.hostName};
+			in lib.mkIf (builtins.pathExists path) builtins.fromTOML (builtins.readFile path))
 		];
 	};
 
