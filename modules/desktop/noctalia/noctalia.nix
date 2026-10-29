@@ -4,10 +4,11 @@
 	peek-time = 2;
 	in {
 		lock = ipc "session lock";
+
 		relock = let
-		scu = "systemctl --user";
-		display = "$(ls /run/user/1000 | grep noctalia-wayland | head -1 | sed -E 's/noctalia-wayland-([0-9]).[ls]ock/wayland-\1/g')";
-		in "${scu} set-environment WAYLAND_DISPLAY=${display}";
+		display = "$(ls /run/user/1000 | grep noctalia-wayland | head -1 | sed -E 's/noctalia-wayland-([0-9]).[ls]ock/wayland-\\1/g')";
+		in "WAYLAND_DISPLAY=${display} noctalia msg session lock";
+
 		notifications = {
 			toggle = ipc "panel-toggle control-center notifications";
 			clear = ipc "notification-clear-history";
