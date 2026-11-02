@@ -1,6 +1,5 @@
 { home, pkgs, lib, config, inputs, ... }: let
 minecraft = config.cfg.games.minecraft;
-lunar-client-package = inputs.lunar-client.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in {
 	options = {
 		cfg.games.minecraft = {
@@ -49,7 +48,7 @@ in {
 		};
 
 		home.packages = with pkgs; []
-		++ lib.optional minecraft.clients.lunar.enable lunar-client-package
+		++ lib.optional minecraft.clients.lunar.enable lunar-client
 		++ lib.optional minecraft.clients.modrinth.enable modrinth-app
 		++ lib.optional minecraft.cubelify.enable cubelify
 		;
