@@ -40,8 +40,8 @@
 			(builtins.fromTOML (builtins.readFile ./noctalia.toml))
 
 			# Per device lockscreens
-			(let path = ./lockscreen-${config.networking.hostName};
-			in lib.mkIf (builtins.pathExists path) builtins.fromTOML (builtins.readFile path))
+			(let path = ./lockscreen-${config.networking.hostName}.toml;
+			in lib.mkIf (builtins.pathExists path) (builtins.fromTOML (builtins.readFile path)))
 		];
 	};
 
