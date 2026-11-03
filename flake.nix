@@ -13,6 +13,7 @@
 		ragenix = {
 			url = "github:yaxitech/ragenix";
 			inputs.agenix.follows = "agenix";
+			inputs.nixpkgs.follows = "agenix/nixpkgs";
 		};
 
 		agenix = {
