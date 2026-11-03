@@ -27,7 +27,7 @@
 				prune = true;
 			};
 			pull = {
-				rebase = true;
+				rebase = "merges";
 			};
 			merge = {
 				conflictStyle = "zdiff3";
