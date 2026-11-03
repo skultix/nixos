@@ -12,7 +12,8 @@ backupKeys = [
 agenix-rekey-package = inputs.agenix-rekey.packages.${pkgs.stdenv.hostPlatform.system}.default;
 in {
 	imports = [
-		inputs.agenix.nixosModules.default
+		# inputs.agenix.nixosModules.default
+		inputs.ragenix.nixosModules.default
 		inputs.agenix-rekey.nixosModules.default
 	];
 

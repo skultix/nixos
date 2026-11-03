@@ -10,10 +10,13 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-		agenix = {
-			# url = "github:ryantm/agenix";
+		ragenix = {
 			url = "github:yaxitech/ragenix";
-			inputs.agenix.inputs.darwin.follows = ""; # no need for apple stuff on nixos
+			inputs.agenix.follows = "agenix";
+		};
+
+		agenix = {
+			url = "github:ryantm/agenix";
 		};
 
 		agenix-rekey = {
