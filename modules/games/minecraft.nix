@@ -39,7 +39,6 @@ in {
 				additionalPrograms = with pkgs; [ ffmpeg ];
 				jdks = with pkgs; [
 					graalvmPackages.graalvm-ce
-					zulu8
 					zulu17
 					zulu
 					zulu25
