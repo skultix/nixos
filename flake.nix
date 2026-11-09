@@ -88,11 +88,6 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
-		paseo = {
-			url = "github:getpaseo/paseo";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-
 		stylix = {
 			url = "github:nix-community/stylix";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -155,7 +150,6 @@
 				inputs.eh.nixosModules.default
 				inputs.flatpak.nixosModules.nix-flatpak
 				inputs.home-manager.nixosModules.default
-				inputs.paseo.nixosModules.default
 				inputs.stylix.nixosModules.stylix
 				inputs.niri.nixosModules.niri
 			];
