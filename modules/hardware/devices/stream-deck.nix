@@ -7,6 +7,6 @@
 		# programs.streamcontroller.enable = true;
 		programs.opendeck.enable = true;
 
-		environment.systemPackages = with pkgs; [ wineWowPackages.stable ];
+		environment.systemPackages = with pkgs; [ wineWow64Packages.stable ];
 	};
 }
