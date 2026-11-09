@@ -14,8 +14,8 @@
 		extraConfig = "require(\"root\")";
 
 		plugins = with pkgs.hyprlandPlugins; [
-			hyprtasking
-			hypr-dynamic-cursors
+			# hyprtasking
+			# hypr-dynamic-cursors
 		];
 	};
 
