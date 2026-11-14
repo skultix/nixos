@@ -8,6 +8,7 @@
 	];
 
 	programs.fish = {
+		shellAbbrs.cl = "claude";
 		shellAbbrs.ccs = "claude-switch";
 
 		# claude-switch (my script)
