@@ -83,6 +83,11 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 
+		oneclient = {
+			url = "github:Polyfrost/OneLauncher";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
+
 		opendeck = {
 			url = "github:skultix/opendeck-flake";
 			inputs.nixpkgs.follows = "nixpkgs";

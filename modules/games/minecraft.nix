@@ -9,6 +9,7 @@ in {
 			
 			clients = {
 				lunar.enable = lib.mkEnableOption "enable Lunar Client";
+				oneclient.enable = lib.mkEnableOption "enable OneClient/OneLauncher";
 				modrinth.enable = lib.mkOption { default = true; };
 			};
 
@@ -49,6 +50,7 @@ in {
 		home.packages = with pkgs; []
 		++ lib.optional minecraft.clients.lunar.enable lunar-client
 		++ lib.optional minecraft.clients.modrinth.enable modrinth-app
+		++ lib.optional minecraft.clients.oneclient.enable inputs.oneclient.packages.${pkgs.stdenv.hostPlatform.system}.default
 		++ lib.optional minecraft.cubelify.enable cubelify
 		;
 
