@@ -3,6 +3,7 @@
 	++ (with pkgs.typstPackages; [
 		wordometer # Word counts
 		codly codly-languages # Fancy codeblocks
+		calloutly # callouts
 	])
 	++ [ # LSP stuff
 		tinymist
