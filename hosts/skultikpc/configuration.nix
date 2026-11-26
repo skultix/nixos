@@ -51,6 +51,7 @@
 			minecraft = {
 				enable = true;
 				clients.lunar.enable = true;
+				clients.oneclient.enable = true;
 			};
 			vr = {
 				enable = true;

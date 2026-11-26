@@ -1019,6 +1019,26 @@
         "type": "github"
       }
     },
+    "oneclient": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1795547452,
+        "narHash": "sha256-8pdreWmGxwKNj3afNQem0CEoXyve4uS/I3oKvt+OLq8=",
+        "owner": "Polyfrost",
+        "repo": "OneLauncher",
+        "rev": "39f0cf3f553cc2f4c5d8e8b2a619f10497d326ca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Polyfrost",
+        "repo": "OneLauncher",
+        "type": "github"
+      }
+    },
     "opendeck": {
       "inputs": {
         "nixpkgs": [
@@ -1109,6 +1129,7 @@
         "nixcord": "nixcord",
         "nixpkgs": "nixpkgs_5",
         "noctalia": "noctalia",
+        "oneclient": "oneclient",
         "opendeck": "opendeck",
         "ragenix": "ragenix",
         "stable": "stable",

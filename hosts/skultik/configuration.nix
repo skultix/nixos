@@ -21,6 +21,7 @@
 			minecraft = {
 				enable = true;
 				clients.lunar.enable = true;
+				clients.oneclient.enable = true;
 			};
 		};
 	};
